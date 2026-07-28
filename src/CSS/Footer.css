@@ -1,0 +1,60 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root,
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.company {
+    text-wrap: nowrap;
+}
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+a {
+    color: white;
+    font-size: 0.95rem;
+}
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@media screen and (max-width: 768px) {
+    .nav-item {
+        display: none;
+    }
+    p {
+        text-wrap: nowrap;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+}
+.nav-item {
+    text-wrap: nowrap;
+}
+p {
+    font-size: 0.95rem;
+    margin: 0;
+}

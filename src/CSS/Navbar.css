@@ -1,0 +1,238 @@
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    color: white;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+#navLogo {
+    color: #ff9900;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px; /* Reduced from 100px for better fit */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    flex: none;
+}
+
+.nav-links a, .category-title {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover, .nav-links a.active, .category-title:hover {
+    color: #ff9900 !important;
+}
+
+/* --- Category Dropdown Styling --- */
+.category-dropdown {
+    position: relative;
+}
+
+.category-title {
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111111;
+    border: 1px solid #333333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    padding: 8px 0;
+    list-style: none;
+    z-index: 1001;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    color: #e2e8f0 !important;
+    padding: 10px 16px;
+    display: block;
+    font-size: 13px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #222222;
+    color: #ff9900 !important;
+}
+
+/* --- Mobile Hamburger Icon --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.bar {
+    background-color: white;
+    height: 2px;
+    width: 22px;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+}
+
+/* --- Cart & Badges --- */
+.cart-icon {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.cart-badge {
+    background: #ff9900;
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 6px;
+}
+
+.cart-desktop {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.cart-mobile {
+    display: none;
+}
+
+/* --- Search Bar --- */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+.search-bar input {
+    padding: 6px 10px;
+    font-size: 13px;
+    width: 160px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+.search-bar input:focus {
+    border-color: #ff9900;
+}
+
+/* --- Responsive Media Queries --- */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #111111;
+        text-align: center;
+        padding: 12px 0;
+        gap: 0;
+        border-bottom: 2px solid #ff9900;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    /* Mobile Dropdown Behavior */
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background-color: #1a1a1a;
+        border: none;
+        border-radius: 0;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .cart-desktop {
+        display: none;
+    }
+
+    .cart-mobile {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .about {
+        display: none;
+    }
+}
