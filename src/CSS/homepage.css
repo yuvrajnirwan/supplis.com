@@ -1,0 +1,133 @@
+/* Styles for HomePage components */
+:root{
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #0ea5e9;
+  --radius: 0.75rem;
+}
+
+.homepage-hero {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(90deg, rgba(0,0,0,0.04), rgba(255,255,255,0.02));
+}
+
+/* Carousel slides */
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.7s cubic-bezier(.2,.8,.2,1), transform 0.7s cubic-bezier(.2,.8,.2,1);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-slide.hidden {
+  opacity: 0;
+  transform: translateY(6px) scale(0.995);
+  z-index: 0;
+}
+.carousel-slide.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* Dots */
+.carousel-dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 0;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  transform: scale(1.05);
+}
+
+/* Hero content */
+.carousel-slide .text-center {
+  padding: 1rem;
+}
+.carousel-slide h2 {
+  text-shadow: 0 6px 22px rgba(0,0,0,0.18);
+}
+.carousel-slide p { color: rgba(255,255,255,0.9); }
+
+.btn-primary{
+  background: var(--card-bg);
+  color: #111827;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(2,6,23,0.08);
+}
+.btn-outline{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #ffffff;
+  padding: 0.45rem 0.95rem;
+  border-radius: 0.5rem;
+}
+
+/* Offers grid */
+.offers-grid{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+  gap: 1rem;
+}
+.offer-card{
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+.offer-card .media{ height: 160px; display:flex; align-items:center; justify-content:center; background: #f8fafc; border-radius: 0.5rem; overflow: hidden; }
+.offer-card img{ max-height: 140px; object-fit: contain; }
+.offer-card .meta { color: var(--muted); font-size: 12px; }
+.offer-card .title { font-weight: 700; font-size: 14px; margin-top:6px; }
+.offer-card .price { font-weight: 800; font-size: 16px; }
+.offer-card .mrp { text-decoration: line-through; color: #9ca3af; font-size: 12px; }
+.offer-card .discount { background: #059669; color: white; padding: 4px 8px; border-radius: 0.5rem; font-weight: 700; font-size: 12px; }
+.offer-card .actions { display:flex; gap:0.5rem; align-items:center; }
+
+/* CTA row */
+.cta-grid{ display:grid; grid-template-columns: repeat(1,1fr); gap:1rem; margin-top:1rem; }
+.cta-card{ background: var(--card-bg); padding:1rem; border-radius:0.6rem; text-align:center; box-shadow: 0 6px 18px rgba(2,6,23,0.04);} 
+
+/* Responsive adjustments */
+@media(min-width:640px){
+  .offers-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .cta-grid{ grid-template-columns: repeat(3,1fr); }
+}
+@media(min-width:1024px){
+  .offers-grid{ grid-template-columns: repeat(4, minmax(0,1fr)); }
+}
+
+/* small utility for text clamp fallback */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
