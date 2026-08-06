@@ -1,0 +1,150 @@
+import {
+  Count,
+  CountSchema,
+  Filter,
+  FilterExcludingWhere,
+  repository,
+  Where,
+} from '@loopback/repository';
+import {
+  post,
+  param,
+  get,
+  getModelSchemaRef,
+  patch,
+  put,
+  del,
+  requestBody,
+  response,
+} from '@loopback/rest';
+import {MultivitaminProduct} from '../models';
+import {MultivitaminProductRepository} from '../repositories';
+
+export class MultivitaminController {
+  constructor(
+    @repository(MultivitaminProductRepository)
+    public multivitaminProductRepository : MultivitaminProductRepository,
+  ) {}
+
+  @post('/multivitamin-products')
+  @response(200, {
+    description: 'MultivitaminProduct model instance',
+    content: {'application/json': {schema: getModelSchemaRef(MultivitaminProduct)}},
+  })
+  async create(
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(MultivitaminProduct, {
+            title: 'NewMultivitaminProduct',
+            exclude: ['id'],
+          }),
+        },
+      },
+    })
+    multivitaminProduct: Omit<MultivitaminProduct, 'id'>,
+  ): Promise<MultivitaminProduct> {
+    return this.multivitaminProductRepository.create(multivitaminProduct);
+  }
+
+  @get('/multivitamin-products/count')
+  @response(200, {
+    description: 'MultivitaminProduct model count',
+    content: {'application/json': {schema: CountSchema}},
+  })
+  async count(
+    @param.where(MultivitaminProduct) where?: Where<MultivitaminProduct>,
+  ): Promise<Count> {
+    return this.multivitaminProductRepository.count(where);
+  }
+
+  @get('/multivitamin-products')
+  @response(200, {
+    description: 'Array of MultivitaminProduct model instances',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: getModelSchemaRef(MultivitaminProduct, {includeRelations: true}),
+        },
+      },
+    },
+  })
+  async find(
+    @param.filter(MultivitaminProduct) filter?: Filter<MultivitaminProduct>,
+  ): Promise<MultivitaminProduct[]> {
+    return this.multivitaminProductRepository.find(filter);
+  }
+
+  @patch('/multivitamin-products')
+  @response(200, {
+    description: 'MultivitaminProduct PATCH success count',
+    content: {'application/json': {schema: CountSchema}},
+  })
+  async updateAll(
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(MultivitaminProduct, {partial: true}),
+        },
+      },
+    })
+    multivitaminProduct: MultivitaminProduct,
+    @param.where(MultivitaminProduct) where?: Where<MultivitaminProduct>,
+  ): Promise<Count> {
+    return this.multivitaminProductRepository.updateAll(multivitaminProduct, where);
+  }
+
+  @get('/multivitamin-products/{id}')
+  @response(200, {
+    description: 'MultivitaminProduct model instance',
+    content: {
+      'application/json': {
+        schema: getModelSchemaRef(MultivitaminProduct, {includeRelations: true}),
+      },
+    },
+  })
+  async findById(
+    @param.path.string('id') id: string,
+    @param.filter(MultivitaminProduct, {exclude: 'where'}) filter?: FilterExcludingWhere<MultivitaminProduct>
+  ): Promise<MultivitaminProduct> {
+    return this.multivitaminProductRepository.findById(id, filter);
+  }
+
+  @patch('/multivitamin-products/{id}')
+  @response(204, {
+    description: 'MultivitaminProduct PATCH success',
+  })
+  async updateById(
+    @param.path.string('id') id: string,
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(MultivitaminProduct, {partial: true}),
+        },
+      },
+    })
+    multivitaminProduct: MultivitaminProduct,
+  ): Promise<void> {
+    await this.multivitaminProductRepository.updateById(id, multivitaminProduct);
+  }
+
+  @put('/multivitamin-products/{id}')
+  @response(204, {
+    description: 'MultivitaminProduct PUT success',
+  })
+  async replaceById(
+    @param.path.string('id') id: string,
+    @requestBody() multivitaminProduct: MultivitaminProduct,
+  ): Promise<void> {
+    await this.multivitaminProductRepository.replaceById(id, multivitaminProduct);
+  }
+
+  @del('/multivitamin-products/{id}')
+  @response(204, {
+    description: 'MultivitaminProduct DELETE success',
+  })
+  async deleteById(@param.path.string('id') id: string): Promise<void> {
+    await this.multivitaminProductRepository.deleteById(id);
+  }
+}

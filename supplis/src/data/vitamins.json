@@ -1,0 +1,163 @@
+[
+  {
+    "id": "prod_vit_001",
+    "name": "Vitamin D3 2000 IU Softgels",
+    "brand": "MuscleBlaze",
+    "category": "Single Vitamins",
+    "description": "High-potency Cholecalciferol (Vitamin D3) softgels engineered to support bone density, calcium absorption, and muscle recovery.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "vitaminD3_IU": 2000,
+      "vitaminD3_mcg": 50
+    },
+    "variants": [
+      {
+        "id": "var_vit_001_1",
+        "sku": "MB-VITD3-2000-60SOFT",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 399,
+        "mrpInr": 599,
+        "stockQuantity": 200,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "MuscleBlaze Vitamin D3 2000 IU Softgels"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_vit_002",
+    "name": "Vitamin C 1000mg with Amla Extract & Zinc",
+    "brand": "Fast&Up",
+    "category": "Single Vitamins",
+    "description": "Effervescent Vitamin C drink tablets made with natural Amla extract and elemental Zinc to strengthen immune defenses and skin collagen synthesis.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 20,
+      "vitaminC_mg": 1000,
+      "zinc_mg": 10,
+      "amlaExtract_mg": 100
+    },
+    "variants": [
+      {
+        "id": "var_vit_002_1",
+        "sku": "FUP-VITC-ORA-20TAB",
+        "flavor": "Orange",
+        "count": 20,
+        "priceInr": 349,
+        "mrpInr": 395,
+        "stockQuantity": 280,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Fast&Up Charge Vitamin C 1000mg Effervescent Tablets"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_vit_003",
+    "name": "Vitamin B12 Sublingual Melt Tablets",
+    "brand": "Truebasics",
+    "category": "Single Vitamins",
+    "description": "Fast-absorbing Methylcobalamin (active form of B12) sublingual tablets to prevent nerve fatigue and support red blood cell formation.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 60,
+      "vitaminB12_mcg": 1500,
+      "activeForm": "Methylcobalamin"
+    },
+    "variants": [
+      {
+        "id": "var_vit_003_1",
+        "sku": "TB-B12-60TAB",
+        "flavor": "Cranberry",
+        "count": 60,
+        "priceInr": 599,
+        "mrpInr": 799,
+        "stockQuantity": 150,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Truebasics Vitamin B12 Methylcobalamin Tablets"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_vit_004",
+    "name": "Vitamin E 400 IU Evion-style Softgels",
+    "brand": "Nutrabay",
+    "category": "Single Vitamins",
+    "description": "Pure d-Alpha Tocopherol Vitamin E softgel capsules to protect tissue cells from oxidative damage and maintain skin moisture.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "vitaminE_IU": 400,
+      "vitaminE_mg": 268
+    },
+    "variants": [
+      {
+        "id": "var_vit_004_1",
+        "sku": "NB-VITE-400-60SOFT",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 299,
+        "mrpInr": 449,
+        "stockQuantity": 190,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Nutrabay Pure Vitamin E 400 IU Capsules"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_vit_005",
+    "name": "Vitamin D3 + K2 (MK-7)",
+    "brand": "Optimum Nutrition",
+    "category": "Single Vitamins",
+    "description": "Synergistic pair of Vitamin D3 (5000 IU) and Menaquinone-7 (Vitamin K2) to ensure calcium is directed into bones rather than arterial walls.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "vitaminD3_IU": 5000,
+      "vitaminK2_MK7_mcg": 100
+    },
+    "variants": [
+      {
+        "id": "var_vit_005_1",
+        "sku": "ON-D3K2-60CAP",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 1299,
+        "mrpInr": 1599,
+        "stockQuantity": 90,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Optimum Nutrition Vitamin D3 and K2 MK7 Capsules"
+          }
+        ]
+      }
+    ]
+  }
+]

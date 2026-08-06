@@ -1,0 +1,167 @@
+[
+  {
+    "id": "prod_wm_001",
+    "name": "L-Carnitine XS 3000 Liquid",
+    "brand": "Ronnie Coleman Signature Series",
+    "category": "L-Carnitine",
+    "description": "High-potency liquid L-Carnitine delivering 3000mg per serving to assist fatty acid transportation into mitochondria for energy conversion.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeMl": 15,
+      "servingsPerContainer": 31,
+      "lCarnitineMg": 3000,
+      "pantothenicAcidMg": 10,
+      "calories": 0
+    },
+    "variants": [
+      {
+        "id": "var_wm_001_1",
+        "sku": "RC-CARN-SOU-465ML",
+        "flavor": "Sour Apple",
+        "weightGrams": 465,
+        "priceInr": 1899,
+        "mrpInr": 2499,
+        "stockQuantity": 110,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Ronnie Coleman L-Carnitine XS 3000 Sour Apple"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_wm_002",
+    "name": "L-Carnitine L-Tartrate 500mg Capsules",
+    "brand": "MuscleBlaze",
+    "category": "L-Carnitine",
+    "description": "Fast-acting L-Carnitine L-Tartrate capsules designed to promote cellular energy metabolism and support fat oxidation during workouts.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "lCarnitineLTartrateMg": 500,
+      "calories": 0
+    },
+    "variants": [
+      {
+        "id": "var_wm_002_1",
+        "sku": "MB-CARN-60CAP",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 649,
+        "mrpInr": 899,
+        "stockQuantity": 190,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "MuscleBlaze L-Carnitine L-Tartrate Capsules"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_wm_003",
+    "name": "Signature CLA 1250mg Softgels",
+    "brand": "Dexter Jackson",
+    "category": "CLA (Conjugated Linoleic Acid)",
+    "description": "High-yield Safflower Seed Oil derived Conjugated Linoleic Acid (CLA) engineered to reduce body fat retention and support lean muscle integrity.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 90,
+      "safflowerSeedOilMg": 1250,
+      "activeClaMg": 1000,
+      "calories": 10
+    },
+    "variants": [
+      {
+        "id": "var_wm_003_1",
+        "sku": "DJ-CLA-1250-90SOFT",
+        "flavor": "Unflavored",
+        "count": 90,
+        "priceInr": 1699,
+        "mrpInr": 2199,
+        "stockQuantity": 85,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Dexter Jackson CLA 1250 Softgels"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_wm_004",
+    "name": "Lipo-6 Black Ultra Concentrate",
+    "brand": "Nutrex Research",
+    "category": "Thermogenic Fat Burner",
+    "description": "Ultra-concentrated fat burner liquid capsules offering metabolic stimulation, appetite regulation, and energy focus.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "caffeineAnhydrousMg": 200,
+      "theobromineMg": 100,
+      "yohimbineHclMg": 3,
+      "rauwolscineMg": 1.5
+    },
+    "variants": [
+      {
+        "id": "var_wm_004_1",
+        "sku": "NTX-LIPO6-UC-60CAP",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 2299,
+        "mrpInr": 2899,
+        "stockQuantity": 75,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Nutrex Lipo 6 Black Ultra Concentrate Liquid Caps"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_wm_005",
+    "name": "L-Carnitine 1500mg Liquid",
+    "brand": "Fast&Up",
+    "category": "L-Carnitine",
+    "description": "Fast-absorbing Carnipure liquid shots enriched with Vitamin B6 to assist fat transportation and prevent workout fatigue.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeMl": 15,
+      "servingsPerContainer": 30,
+      "lCarnitineMg": 1500,
+      "vitaminB6mg": 2.0,
+      "calories": 0
+    },
+    "variants": [
+      {
+        "id": "var_wm_005_1",
+        "sku": "FUP-CARN-CIT-450ML",
+        "flavor": "Citrus Lemon",
+        "weightGrams": 450,
+        "priceInr": 799,
+        "mrpInr": 995,
+        "stockQuantity": 140,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Fast&Up L-Carnitine Liquid Citrus"
+          }
+        ]
+      }
+    ]
+  }
+]

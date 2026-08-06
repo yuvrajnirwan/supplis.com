@@ -1,0 +1,150 @@
+import {
+  Count,
+  CountSchema,
+  Filter,
+  FilterExcludingWhere,
+  repository,
+  Where,
+} from '@loopback/repository';
+import {
+  post,
+  param,
+  get,
+  getModelSchemaRef,
+  patch,
+  put,
+  del,
+  requestBody,
+  response,
+} from '@loopback/rest';
+import {SaltProduct} from '../models';
+import {SaltProductRepository} from '../repositories';
+
+export class SaltController {
+  constructor(
+    @repository(SaltProductRepository)
+    public saltProductRepository : SaltProductRepository,
+  ) {}
+
+  @post('/salt-products')
+  @response(200, {
+    description: 'SaltProduct model instance',
+    content: {'application/json': {schema: getModelSchemaRef(SaltProduct)}},
+  })
+  async create(
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(SaltProduct, {
+            title: 'NewSaltProduct',
+            exclude: ['id'],
+          }),
+        },
+      },
+    })
+    saltProduct: Omit<SaltProduct, 'id'>,
+  ): Promise<SaltProduct> {
+    return this.saltProductRepository.create(saltProduct);
+  }
+
+  @get('/salt-products/count')
+  @response(200, {
+    description: 'SaltProduct model count',
+    content: {'application/json': {schema: CountSchema}},
+  })
+  async count(
+    @param.where(SaltProduct) where?: Where<SaltProduct>,
+  ): Promise<Count> {
+    return this.saltProductRepository.count(where);
+  }
+
+  @get('/salt-products')
+  @response(200, {
+    description: 'Array of SaltProduct model instances',
+    content: {
+      'application/json': {
+        schema: {
+          type: 'array',
+          items: getModelSchemaRef(SaltProduct, {includeRelations: true}),
+        },
+      },
+    },
+  })
+  async find(
+    @param.filter(SaltProduct) filter?: Filter<SaltProduct>,
+  ): Promise<SaltProduct[]> {
+    return this.saltProductRepository.find(filter);
+  }
+
+  @patch('/salt-products')
+  @response(200, {
+    description: 'SaltProduct PATCH success count',
+    content: {'application/json': {schema: CountSchema}},
+  })
+  async updateAll(
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(SaltProduct, {partial: true}),
+        },
+      },
+    })
+    saltProduct: SaltProduct,
+    @param.where(SaltProduct) where?: Where<SaltProduct>,
+  ): Promise<Count> {
+    return this.saltProductRepository.updateAll(saltProduct, where);
+  }
+
+  @get('/salt-products/{id}')
+  @response(200, {
+    description: 'SaltProduct model instance',
+    content: {
+      'application/json': {
+        schema: getModelSchemaRef(SaltProduct, {includeRelations: true}),
+      },
+    },
+  })
+  async findById(
+    @param.path.string('id') id: string,
+    @param.filter(SaltProduct, {exclude: 'where'}) filter?: FilterExcludingWhere<SaltProduct>
+  ): Promise<SaltProduct> {
+    return this.saltProductRepository.findById(id, filter);
+  }
+
+  @patch('/salt-products/{id}')
+  @response(204, {
+    description: 'SaltProduct PATCH success',
+  })
+  async updateById(
+    @param.path.string('id') id: string,
+    @requestBody({
+      content: {
+        'application/json': {
+          schema: getModelSchemaRef(SaltProduct, {partial: true}),
+        },
+      },
+    })
+    saltProduct: SaltProduct,
+  ): Promise<void> {
+    await this.saltProductRepository.updateById(id, saltProduct);
+  }
+
+  @put('/salt-products/{id}')
+  @response(204, {
+    description: 'SaltProduct PUT success',
+  })
+  async replaceById(
+    @param.path.string('id') id: string,
+    @requestBody() saltProduct: SaltProduct,
+  ): Promise<void> {
+    await this.saltProductRepository.replaceById(id, saltProduct);
+  }
+
+  @del('/salt-products/{id}')
+  @response(204, {
+    description: 'SaltProduct DELETE success',
+  })
+  async deleteById(@param.path.string('id') id: string): Promise<void> {
+    await this.saltProductRepository.deleteById(id);
+  }
+}

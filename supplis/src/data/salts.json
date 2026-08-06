@@ -1,0 +1,198 @@
+[
+  {
+    "id": "prod_salt_001",
+    "name": "Salts Electrolyte Mix",
+    "brand": "Supply6",
+    "category": "Hydration Salts",
+    "description": "Zero added sugar electrolyte drink mix formulated for 3x faster hydration. Packed with Himalayan Pink Salt, Magnesium, Potassium, and Vitamin C.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 6,
+      "servingsPerContainer": 30,
+      "calories": 10,
+      "sodiumMg": 500,
+      "potassiumMg": 200,
+      "magnesiumMg": 60,
+      "calciumMg": 40,
+      "vitaminCmg": 50
+    },
+    "variants": [
+      {
+        "id": "var_salt_001_1",
+        "sku": "SUP-SALT-BLU-180G",
+        "flavor": "Blue Raspberry",
+        "weightGrams": 180,
+        "priceInr": 899,
+        "mrpInr": 1199,
+        "stockQuantity": 150,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Supply6 Salts Blue Raspberry Pack"
+          }
+        ]
+      },
+      {
+        "id": "var_salt_001_2",
+        "sku": "SUP-SALT-LEM-180G",
+        "flavor": "Lemon Lime",
+        "weightGrams": 180,
+        "priceInr": 899,
+        "mrpInr": 1199,
+        "stockQuantity": 120,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Supply6 Salts Lemon Lime Pack"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_salt_002",
+    "name": "Fuel One Hydr8 Isotonic Instant Energy",
+    "brand": "MuscleBlaze",
+    "category": "Isotonic Salts",
+    "description": "Instant rehydration formula powered by 1082mg essential electrolytes, dextrose, and added BCAAs to replenish lost mineral salts during intense heat or exercise.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 34,
+      "servingsPerContainer": 29,
+      "calories": 126,
+      "sodiumMg": 310,
+      "potassiumMg": 95,
+      "magnesiumMg": 18,
+      "chlorideMg": 480,
+      "carbsGrams": 31.5
+    },
+    "variants": [
+      {
+        "id": "var_salt_002_1",
+        "sku": "MB-HYDR8-ORA-1KG",
+        "flavor": "Tangy Orange",
+        "weightGrams": 1000,
+        "priceInr": 549,
+        "mrpInr": 699,
+        "stockQuantity": 220,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "MuscleBlaze Hydr8 Isotonic Tub"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_salt_003",
+    "name": "Essential Electrolytes Powder",
+    "brand": "Optimum Nutrition",
+    "category": "Hydration Salts",
+    "description": "Premium intra-workout hydration salt formula designed for rapid fluid retention, mineral replacement, and muscle cramp prevention.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 8,
+      "servingsPerContainer": 30,
+      "calories": 15,
+      "sodiumMg": 360,
+      "potassiumMg": 220,
+      "magnesiumMg": 75,
+      "calciumMg": 50,
+      "vitaminCmg": 90
+    },
+    "variants": [
+      {
+        "id": "var_salt_003_1",
+        "sku": "ON-ELEC-WAT-240G",
+        "flavor": "Watermelon Splash",
+        "weightGrams": 240,
+        "priceInr": 1499,
+        "mrpInr": 1899,
+        "stockQuantity": 80,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Optimum Nutrition Essential Electrolytes Watermelon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_salt_004",
+    "name": "Reload Instant Electrolyte Tablets",
+    "brand": "Fast&Up",
+    "category": "Hydration Salts",
+    "description": "Effervescent salt tablets providing hypotonic hydration with a balanced ratio of 5 vital electrolytes (Sodium, Potassium, Magnesium, Calcium, Chloride).",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 4,
+      "servingsPerContainer": 20,
+      "calories": 10,
+      "sodiumMg": 180,
+      "potassiumMg": 77,
+      "magnesiumMg": 20,
+      "calciumMg": 12.5,
+      "chlorideMg": 122.5
+    },
+    "variants": [
+      {
+        "id": "var_salt_004_1",
+        "sku": "FUP-REL-COL-20TAB",
+        "flavor": "Fizzy Cola",
+        "weightGrams": 80,
+        "priceInr": 349,
+        "mrpInr": 395,
+        "stockQuantity": 300,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Fast&Up Reload Fizzy Cola Tube"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_salt_005",
+    "name": "Pure Electrolyte Salt Powder",
+    "brand": "Nutrabay",
+    "category": "Hydration Salts",
+    "description": "Zero carb, unflavored pure electrolyte salt blend (Sodium Chloride, Potassium Citrate, Magnesium Sulfate) ideal for keto diets and intense fasting support.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 5,
+      "servingsPerContainer": 50,
+      "calories": 0,
+      "sodiumMg": 450,
+      "potassiumMg": 250,
+      "magnesiumMg": 100,
+      "calciumMg": 60,
+      "carbsGrams": 0
+    },
+    "variants": [
+      {
+        "id": "var_salt_005_1",
+        "sku": "NB-SALT-UNF-250G",
+        "flavor": "Unflavored",
+        "weightGrams": 250,
+        "priceInr": 599,
+        "mrpInr": 799,
+        "stockQuantity": 160,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Nutrabay Pure Electrolyte Salts Pouch"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "id": "prod_omg_001",
+    "name": "Triple Strength Fish Oil 1000mg",
+    "brand": "MuscleBlaze",
+    "category": "Omega-3",
+    "description": "High-potency triple strength fish oil delivering 540mg EPA and 360mg DHA per softgel with an enteric coating to prevent fishy burps.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalFishOilMg": 1250,
+      "totalOmega3Mg": 900,
+      "epaMg": 540,
+      "dhaMg": 360,
+      "entericCoated": true
+    },
+    "variants": [
+      {
+        "id": "var_omg_001_1",
+        "sku": "MB-OMG-TRI-60SOFT",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 899,
+        "mrpInr": 1199,
+        "stockQuantity": 180,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "MuscleBlaze Triple Strength Fish Oil 60 Softgels"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_omg_002",
+    "name": "Triple Strength Omega 3 Fish Oil",
+    "brand": "Truebasics",
+    "category": "Omega-3",
+    "description": "Molecularly distilled, ultra-pure fish oil extracted from cold water fishes. Provides 525mg EPA and 375mg DHA per capsule.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalFishOilMg": 1250,
+      "totalOmega3Mg": 900,
+      "epaMg": 525,
+      "dhaMg": 375,
+      "entericCoated": true
+    },
+    "variants": [
+      {
+        "id": "var_omg_002_1",
+        "sku": "TB-OMG-TRI-60SOFT",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 999,
+        "mrpInr": 1399,
+        "stockQuantity": 130,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Truebasics Triple Strength Omega 3 Softgels"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_omg_003",
+    "name": "Fish Oil 1000mg Softgels",
+    "brand": "Optimum Nutrition",
+    "category": "Omega-3",
+    "description": "Enteric-coated softgels containing essential fatty acids to support joint mobility, cardiovascular health, and brain function.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 100,
+      "totalFishOilMg": 1000,
+      "totalOmega3Mg": 300,
+      "epaMg": 180,
+      "dhaMg": 120,
+      "entericCoated": true
+    },
+    "variants": [
+      {
+        "id": "var_omg_003_1",
+        "sku": "ON-OMG-100SOFT",
+        "flavor": "Unflavored",
+        "count": 100,
+        "priceInr": 1499,
+        "mrpInr": 1899,
+        "stockQuantity": 90,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Optimum Nutrition Fish Oil 1000mg 100 Softgels"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_omg_004",
+    "name": "Plant-Based Vegan Omega 3",
+    "brand": "OZiva",
+    "category": "Vegan Omega-3",
+    "description": "100% Vegan Omega-3 derived from natural Algal Oil providing direct EPA and DHA without fish ocean contaminants or mercury.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalAlgalOilMg": 1000,
+      "totalOmega3Mg": 400,
+      "epaMg": 100,
+      "dhaMg": 300,
+      "entericCoated": false
+    },
+    "variants": [
+      {
+        "id": "var_omg_004_1",
+        "sku": "OZ-OMG-VEG-60CAP",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 899,
+        "mrpInr": 1199,
+        "stockQuantity": 110,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "OZiva Plant Based Vegan Omega 3 Capsules"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod_omg_005",
+    "name": "Pure Omega 3 Fish Oil 1000mg",
+    "brand": "Nutrabay",
+    "category": "Omega-3",
+    "description": "Heavy-metal tested purified omega-3 capsules for everyday cardiovascular wellness and muscle soreness reduction.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalFishOilMg": 1000,
+      "totalOmega3Mg": 330,
+      "epaMg": 180,
+      "dhaMg": 120,
+      "entericCoated": false
+    },
+    "variants": [
+      {
+        "id": "var_omg_005_1",
+        "sku": "NB-OMG-60SOFT",
+        "flavor": "Unflavored",
+        "count": 60,
+        "priceInr": 499,
+        "mrpInr": 699,
+        "stockQuantity": 210,
+        "images": [
+          {
+            "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
+            "isPrimary": true,
+            "altText": "Nutrabay Pure Omega 3 Fish Oil"
+          }
+        ]
+      }
+    ]
+  }
+]

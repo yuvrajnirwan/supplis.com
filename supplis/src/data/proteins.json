@@ -1,0 +1,614 @@
+[
+  {
+    "id": "prod_atom_001",
+    "name": "ATOM Whey Protein",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Whey Protein",
+    "description": "Labdoor USA certified whey protein concentrate and isolate blend with digestive enzymes for fast muscle recovery.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 36, "calories": 136, "proteinGrams": 27, "carbsGrams": 2.5, "fatGrams": 1.5, "bcaaGrams": 5.7, "eaaGrams": 12.2 },
+    "variants": [
+      { "id": "var_atom_001_1", "sku": "ATOM-WHEY-CHO-1KG", "flavor": "Double Rich Chocolate", "weightGrams": 1000, "priceInr": 2199, "mrpInr": 2899, "stockQuantity": 150, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ATOM Whey Protein Double Rich Chocolate 1kg" }] }
+    ]
+  },
+  {
+    "id": "prod_atom_002",
+    "name": "ATOM Whey Protein Isolate",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Whey Isolate",
+    "description": "Ultra-pure fast acting isolate delivering 29g protein with minimal carbs and zero sugar.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 35, "calories": 128, "proteinGrams": 29, "carbsGrams": 1.2, "fatGrams": 0.5, "bcaaGrams": 6.1, "eaaGrams": 12.9 },
+    "variants": [
+      { "id": "var_atom_002_1", "sku": "ATOM-ISO-CHO-1KG", "flavor": "Choco Hazel Fusion", "weightGrams": 1000, "priceInr": 2899, "mrpInr": 3699, "stockQuantity": 80, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ATOM Whey Protein Isolate 1kg" }] }
+    ]
+  },
+  {
+    "id": "prod_atom_003",
+    "name": "ATOM Performance Whey",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Whey Protein",
+    "description": "Performance whey blend powered by Safed Musli and Tribulus for boosting strength and endurance.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 36, "calories": 138, "proteinGrams": 25, "carbsGrams": 3.8, "fatGrams": 1.8, "bcaaGrams": 5.4, "eaaGrams": 11.5 },
+    "variants": [
+      { "id": "var_atom_003_1", "sku": "ATOM-PERF-MAN-1KG", "flavor": "Mango Fusion", "weightGrams": 1000, "priceInr": 1999, "mrpInr": 2599, "stockQuantity": 110, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ATOM Performance Whey Mango Fusion" }] }
+    ]
+  },
+  {
+    "id": "prod_atom_004",
+    "name": "ATOM Beginners Whey Protein",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Beginners Whey",
+    "description": "Formulated for gym novices with light digestive profile and easy macro absorption.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 32, "calories": 122, "proteinGrams": 20, "carbsGrams": 6.5, "fatGrams": 1.2, "bcaaGrams": 4.2, "eaaGrams": 9.1 },
+    "variants": [
+      { "id": "var_atom_004_1", "sku": "ATOM-BEG-CHO-1KG", "flavor": "Chocolate", "weightGrams": 1000, "priceInr": 1499, "mrpInr": 1999, "stockQuantity": 130, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ATOM Beginners Whey Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_avatar_001",
+    "name": "Avvatar Absolute 100% Whey Protein",
+    "brand": "Avvatar",
+    "category": "Whey Protein",
+    "description": "Made from fresh cow milk within 24 hours. Packed with naturally occurring BCAAs and EAAs.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 35, "calories": 134, "proteinGrams": 24, "carbsGrams": 2.3, "fatGrams": 1.9, "bcaaGrams": 5.5, "eaaGrams": 11.4 },
+    "variants": [
+      { "id": "var_avatar_001_1", "sku": "AVT-WHEY-CHO-1KG", "flavor": "Belgian Chocolate", "weightGrams": 1000, "priceInr": 2599, "mrpInr": 3199, "stockQuantity": 95, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Avvatar 100% Whey Belgian Chocolate 1kg" }] }
+    ]
+  },
+  {
+    "id": "prod_avatar_002",
+    "name": "Avvatar Isolate 100% Whey Protein",
+    "brand": "Avvatar",
+    "category": "Whey Isolate",
+    "description": "Pure whey protein isolate offering rapid digestibility and 28g protein per scoop.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 120, "proteinGrams": 28, "carbsGrams": 1.0, "fatGrams": 0.4, "bcaaGrams": 6.2, "eaaGrams": 13.0 },
+    "variants": [
+      { "id": "var_avatar_002_1", "sku": "AVT-ISO-VAN-1KG", "flavor": "Vanilla Caramel", "weightGrams": 1000, "priceInr": 3299, "mrpInr": 3999, "stockQuantity": 60, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Avvatar Isolate Vanilla Caramel" }] }
+    ]
+  },
+  {
+    "id": "prod_avatar_003",
+    "name": "Avvatar Unflavored Raw Whey",
+    "brand": "Avvatar",
+    "category": "Raw Whey",
+    "description": "Zero flavor additives, zero sweetener raw whey concentrate directly processed from grass-fed fresh milk.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 121, "proteinGrams": 24, "carbsGrams": 1.8, "fatGrams": 1.5, "bcaaGrams": 5.3, "eaaGrams": 10.9 },
+    "variants": [
+      { "id": "var_avatar_003_1", "sku": "AVT-RAW-UNF-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 2199, "mrpInr": 2699, "stockQuantity": 120, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Avvatar Raw Whey 1kg" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_001",
+    "name": "Biozyme Performance Whey",
+    "brand": "MuscleBlaze",
+    "category": "Whey Protein",
+    "description": "Clinically tested enhanced absorption formula with proprietary EAAB blend specifically designed for Indian diets.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 36, "calories": 138, "proteinGrams": 25, "carbsGrams": 3.0, "fatGrams": 1.5, "bcaaGrams": 5.51, "eaaGrams": 11.75 },
+    "variants": [
+      { "id": "var_mb_001_1", "sku": "MB-BIO-CHO-1KG", "flavor": "Rich Chocolate", "weightGrams": 1000, "priceInr": 2899, "mrpInr": 3499, "stockQuantity": 120, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Biozyme Performance Whey 1kg" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_002",
+    "name": "Biozyme Iso-Zero",
+    "brand": "MuscleBlaze",
+    "category": "Whey Isolate",
+    "description": "Zero carb, zero lactose pure whey isolate ideal for lactose sensitive individuals on strict low-calorie cuts.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 31.5, "calories": 114, "proteinGrams": 27, "carbsGrams": 0.2, "fatGrams": 0.3, "bcaaGrams": 5.9, "eaaGrams": 12.4 },
+    "variants": [
+      { "id": "var_mb_002_1", "sku": "MB-ISO-CHO-1KG", "flavor": "Low Carb Ice Cream Chocolate", "weightGrams": 1000, "priceInr": 3899, "mrpInr": 4599, "stockQuantity": 70, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Biozyme Iso-Zero" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_003",
+    "name": "Biozyme Gold 100% Whey",
+    "brand": "MuscleBlaze",
+    "category": "Whey Protein",
+    "description": "Premium imported isolate & concentrate blend certified by Informed Choice UK.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 34, "calories": 130, "proteinGrams": 25, "carbsGrams": 2.2, "fatGrams": 1.4, "bcaaGrams": 5.6, "eaaGrams": 11.8 },
+    "variants": [
+      { "id": "var_mb_003_1", "sku": "MB-GOLD-CHO-1KG", "flavor": "Double Rich Chocolate", "weightGrams": 1000, "priceInr": 3299, "mrpInr": 3999, "stockQuantity": 85, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Biozyme Gold Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_004",
+    "name": "Raw Whey Protein 80%",
+    "brand": "MuscleBlaze",
+    "category": "Raw Whey",
+    "description": "Unflavored and unsweetened 80% whey concentrate without any added preservatives or processing.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 120, "proteinGrams": 24, "carbsGrams": 2.1, "fatGrams": 1.5, "bcaaGrams": 5.2, "eaaGrams": 10.8 },
+    "variants": [
+      { "id": "var_mb_004_1", "sku": "MB-RAW-80-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 2199, "mrpInr": 2699, "stockQuantity": 150, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Raw Whey 80%" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_005",
+    "name": "Beginner's Whey Protein",
+    "brand": "MuscleBlaze",
+    "category": "Beginners Whey",
+    "description": "Balanced protein-to-carbohydrate formula tailored for beginners entering high-volume strength training.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 111, "proteinGrams": 12, "carbsGrams": 12.8, "fatGrams": 1.5, "bcaaGrams": 2.65, "eaaGrams": 5.64 },
+    "variants": [
+      { "id": "var_mb_005_1", "sku": "MB-BEG-CHO-1KG", "flavor": "Chocolate", "weightGrams": 1000, "priceInr": 1499, "mrpInr": 1899, "stockQuantity": 200, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Beginners Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_on_001",
+    "name": "Gold Standard 100% Whey",
+    "brand": "Optimum Nutrition",
+    "category": "Whey Isolate Blend",
+    "description": "The world's benchmark post-workout protein blend powered by premium Whey Protein Isolate.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30.4, "calories": 117, "proteinGrams": 24, "carbsGrams": 3.0, "fatGrams": 1.0, "bcaaGrams": 5.5, "eaaGrams": 11.0 },
+    "variants": [
+      { "id": "var_on_001_1", "sku": "ON-GS-DRC-907G", "flavor": "Double Rich Chocolate", "weightGrams": 907, "priceInr": 3899, "mrpInr": 4599, "stockQuantity": 100, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ON Gold Standard Double Rich Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_on_002",
+    "name": "Gold Standard 100% Isolate",
+    "brand": "Optimum Nutrition",
+    "category": "Whey Isolate",
+    "description": "Hydrolyzed & ultra-filtered whey protein isolate for ultra-fast amino acid absorption.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 110, "proteinGrams": 25, "carbsGrams": 1.0, "fatGrams": 0.5, "bcaaGrams": 5.5, "eaaGrams": 11.8 },
+    "variants": [
+      { "id": "var_on_002_1", "sku": "ON-ISO-CHO-930G", "flavor": "Chocolate Bliss", "weightGrams": 930, "priceInr": 4899, "mrpInr": 5699, "stockQuantity": 50, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ON Gold Standard Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_on_003",
+    "name": "Performance Whey Protein",
+    "brand": "Optimum Nutrition",
+    "category": "Whey Concentrate",
+    "description": "Ultra-filtered all-whey blend designed for cost-effective everyday athletic performance.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 34, "calories": 130, "proteinGrams": 24, "carbsGrams": 4.0, "fatGrams": 2.0, "bcaaGrams": 5.0, "eaaGrams": 10.5 },
+    "variants": [
+      { "id": "var_on_003_1", "sku": "ON-PERF-CHO-1KG", "flavor": "Chocolate Milkshake", "weightGrams": 1000, "priceInr": 3199, "mrpInr": 3799, "stockQuantity": 90, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ON Performance Whey Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_on_004",
+    "name": "Gold Standard 100% Plant Protein",
+    "brand": "Optimum Nutrition",
+    "category": "Plant Protein",
+    "description": "100% vegan protein blend derived from pea, rice, and sacha inchi organic seeds.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 36, "calories": 140, "proteinGrams": 24, "carbsGrams": 5.0, "fatGrams": 2.5, "bcaaGrams": 4.0, "eaaGrams": 9.0 },
+    "variants": [
+      { "id": "var_on_004_1", "sku": "ON-PLANT-CHO-684G", "flavor": "Chocolate Fudge", "weightGrams": 684, "priceInr": 3499, "mrpInr": 4199, "stockQuantity": 40, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ON Gold Standard Plant Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_twt_001",
+    "name": "100% Clean Whey Isolate & Concentrate",
+    "brand": "The Whole Truth",
+    "category": "Clean Whey",
+    "description": "Zero artificial sweeteners or stevia. Sweetened only with naturally dried dates and real cocoa.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 32, "calories": 130, "proteinGrams": 24, "carbsGrams": 4.5, "fatGrams": 1.8, "bcaaGrams": 5.4, "eaaGrams": 11.2 },
+    "variants": [
+      { "id": "var_twt_001_1", "sku": "TWT-WHEY-COC-1KG", "flavor": "Light Cocoa", "weightGrams": 1000, "priceInr": 3887, "mrpInr": 4499, "stockQuantity": 75, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "The Whole Truth Light Cocoa Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_twt_002",
+    "name": "Unflavored Clean Raw Whey",
+    "brand": "The Whole Truth",
+    "category": "Raw Whey",
+    "description": "100% unflavored cold-processed whey isolate and concentrate blend with zero additives.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 118, "proteinGrams": 26, "carbsGrams": 0.8, "fatGrams": 1.2, "bcaaGrams": 5.7, "eaaGrams": 12.1 },
+    "variants": [
+      { "id": "var_twt_002_1", "sku": "TWT-RAW-UNF-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 3299, "mrpInr": 3899, "stockQuantity": 90, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "The Whole Truth Raw Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_tb_001",
+    "name": "100% Raw Whey Protein",
+    "brand": "Truebasics",
+    "category": "Raw Whey",
+    "description": "Pure unflavored European whey protein concentrate blended with multi-enzyme DigeZyme complex.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 120, "proteinGrams": 24, "carbsGrams": 2.1, "fatGrams": 1.8, "bcaaGrams": 5.2, "eaaGrams": 10.8 },
+    "variants": [
+      { "id": "var_tb_001_1", "sku": "TB-RAW-UNF-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 2399, "mrpInr": 2899, "stockQuantity": 110, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Truebasics Raw Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_tb_002",
+    "name": "Truebasics Ultra Whey Isolate",
+    "brand": "Truebasics",
+    "category": "Whey Isolate",
+    "description": "Grass-fed whey isolate boosted with clinically proven Nutra-Pro enzyme blend for 90%+ protein density.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 31, "calories": 115, "proteinGrams": 27, "carbsGrams": 1.1, "fatGrams": 0.4, "bcaaGrams": 5.8, "eaaGrams": 12.3 },
+    "variants": [
+      { "id": "var_tb_002_1", "sku": "TB-ISO-CHO-1KG", "flavor": "Gourmet Chocolate", "weightGrams": 1000, "priceInr": 3499, "mrpInr": 4199, "stockQuantity": 65, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Truebasics Ultra Whey Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_sy_001",
+    "name": "Plant Power Protein",
+    "brand": "Superyou",
+    "category": "Plant Protein",
+    "description": "100% Vegan plant-based protein crafted from pea protein isolate and brown rice protein concentrate.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 125, "proteinGrams": 25, "carbsGrams": 3.2, "fatGrams": 1.2, "bcaaGrams": 4.8, "eaaGrams": 9.9 },
+    "variants": [
+      { "id": "var_sy_001_1", "sku": "SY-PLANT-CHO-1KG", "flavor": "Dark Chocolate", "weightGrams": 1000, "priceInr": 2699, "mrpInr": 3199, "stockQuantity": 85, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Superyou Plant Power Dark Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_nb_001",
+    "name": "Nutrabay Gold Whey Protein Concentrate",
+    "brand": "Nutrabay",
+    "category": "Whey Protein",
+    "description": "Cross-flow microfiltered whey concentrate providing 25g protein per serving at budget-friendly pricing.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 131, "proteinGrams": 25, "carbsGrams": 2.8, "fatGrams": 2.1, "bcaaGrams": 5.3, "eaaGrams": 11.1 },
+    "variants": [
+      { "id": "var_nb_001_1", "sku": "NB-GOLD-CHO-1KG", "flavor": "Rich Chocolate Milkshake", "weightGrams": 1000, "priceInr": 1899, "mrpInr": 2399, "stockQuantity": 140, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Nutrabay Gold Whey Concentrate" }] }
+    ]
+  },
+  {
+    "id": "prod_nb_002",
+    "name": "Nutrabay Pure Whey Protein Isolate",
+    "brand": "Nutrabay",
+    "category": "Whey Isolate",
+    "description": "Unflavored 100% microfiltered isolate with zero artificial colors, sweeteners, or fillers.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 111, "proteinGrams": 27, "carbsGrams": 0.5, "fatGrams": 0.3, "bcaaGrams": 6.0, "eaaGrams": 12.6 },
+    "variants": [
+      { "id": "var_nb_002_1", "sku": "NB-PURE-ISO-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 2499, "mrpInr": 3099, "stockQuantity": 100, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Nutrabay Pure Whey Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_nb_003",
+    "name": "Nutrabay Wellness Vegan Plant Protein",
+    "brand": "Nutrabay",
+    "category": "Plant Protein",
+    "description": "Pea and pea isolate blend naturally sweetened with organic stevia and added superfoods.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 34, "calories": 128, "proteinGrams": 24, "carbsGrams": 3.1, "fatGrams": 1.6, "bcaaGrams": 4.5, "eaaGrams": 9.4 },
+    "variants": [
+      { "id": "var_nb_003_1", "sku": "NB-VEG-CHO-1KG", "flavor": "Gourmet Chocolate", "weightGrams": 1000, "priceInr": 1699, "mrpInr": 2199, "stockQuantity": 90, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Nutrabay Wellness Plant Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_mp_001",
+    "name": "Impact Whey Protein",
+    "brand": "Myprotein",
+    "category": "Whey Concentrate",
+    "description": "Europe's bestseller featuring high-grade grass-fed cow whey in over 20 global flavors.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 25, "calories": 103, "proteinGrams": 21, "carbsGrams": 1.0, "fatGrams": 1.9, "bcaaGrams": 4.5, "eaaGrams": 9.2 },
+    "variants": [
+      { "id": "var_mp_001_1", "sku": "MP-IMP-CHO-1KG", "flavor": "Chocolate Smooth", "weightGrams": 1000, "priceInr": 2999, "mrpInr": 3799, "stockQuantity": 110, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Myprotein Impact Whey Smooth Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_mp_002",
+    "name": "Impact Whey Isolate",
+    "brand": "Myprotein",
+    "category": "Whey Isolate",
+    "description": "Fat-free and low-sugar purified isolate delivering 90%+ pure protein concentration per serving.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 25, "calories": 93, "proteinGrams": 23, "carbsGrams": 0.6, "fatGrams": 0.1, "bcaaGrams": 5.1, "eaaGrams": 10.8 },
+    "variants": [
+      { "id": "var_mp_002_1", "sku": "MP-ISO-VAN-1KG", "flavor": "Vanilla", "weightGrams": 1000, "priceInr": 3999, "mrpInr": 4899, "stockQuantity": 60, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Myprotein Impact Isolate Vanilla" }] }
+    ]
+  },
+  {
+    "id": "prod_fastup_001",
+    "name": "Plant Protein Isolate",
+    "brand": "Fast&Up",
+    "category": "Plant Protein",
+    "description": "Vegan formula made from pea & brown rice isolates with added natural digestive enzymes and beetroot extract.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 34, "calories": 130, "proteinGrams": 26, "carbsGrams": 2.2, "fatGrams": 1.8, "bcaaGrams": 5.0, "eaaGrams": 10.5 },
+    "variants": [
+      { "id": "var_fastup_001_1", "sku": "FUP-PLANT-CHO-800G", "flavor": "Ghana Chocolate", "weightGrams": 800, "priceInr": 2399, "mrpInr": 2995, "stockQuantity": 80, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Fast&Up Plant Protein Ghana Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_fastup_002",
+    "name": "Whey Advanced Protein",
+    "brand": "Fast&Up",
+    "category": "Whey Protein",
+    "description": "Cross-flow microfiltered grass-fed whey with added ProHydrolase enzyme technology for fast recovery.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 32, "calories": 124, "proteinGrams": 24, "carbsGrams": 2.0, "fatGrams": 1.5, "bcaaGrams": 5.5, "eaaGrams": 11.2 },
+    "variants": [
+      { "id": "var_fastup_002_1", "sku": "FUP-WHEY-CHO-1KG", "flavor": "Rich Chocolate", "weightGrams": 1000, "priceInr": 2599, "mrpInr": 3299, "stockQuantity": 70, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Fast&Up Whey Advanced Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_oziva_001",
+    "name": "Protein & Herbs for Men",
+    "brand": "OZiva",
+    "category": "Ayurvedic Protein",
+    "description": "Clean whey protein blended with Ayurvedic herbs like Ashwagandha, Musli, and Brahmi for stamina.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 116, "proteinGrams": 22, "carbsGrams": 3.5, "fatGrams": 1.1, "bcaaGrams": 4.6, "eaaGrams": 9.5 },
+    "variants": [
+      { "id": "var_oziva_001_1", "sku": "OZ-HERB-CHO-1KG", "flavor": "Chocolate", "weightGrams": 1000, "priceInr": 2979, "mrpInr": 3499, "stockQuantity": 85, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "OZiva Protein & Herbs Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_oziva_002",
+    "name": "Bioactive Plant Protein",
+    "brand": "OZiva",
+    "category": "Plant Protein",
+    "description": "Vegan plant protein enriched with plant-based enzymes for 30% better protein digestion.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 35, "calories": 132, "proteinGrams": 25, "carbsGrams": 3.8, "fatGrams": 1.9, "bcaaGrams": 4.9, "eaaGrams": 10.1 },
+    "variants": [
+      { "id": "var_oziva_002_1", "sku": "OZ-BIO-CHO-500G", "flavor": "Creamy Chocolate", "weightGrams": 500, "priceInr": 1379, "mrpInr": 1699, "stockQuantity": 100, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "OZiva Bioactive Plant Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_dym_001",
+    "name": "ISO100 Hydrolyzed Whey Isolate",
+    "brand": "Dymatize",
+    "category": "Hydrolyzed Whey",
+    "description": "Globally renowned hydrolyzed 100% whey protein isolate with near-instantaneous muscle digestion.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 110, "proteinGrams": 25, "carbsGrams": 1.0, "fatGrams": 0.5, "bcaaGrams": 5.5, "eaaGrams": 11.8 },
+    "variants": [
+      { "id": "var_dym_001_1", "sku": "DYM-ISO-GBC-1KG", "flavor": "Gourmet Chocolate", "weightGrams": 1000, "priceInr": 4999, "mrpInr": 5999, "stockQuantity": 45, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Dymatize ISO100 Gourmet Chocolate" }] }
+    ]
+  },
+  {
+    "id": "prod_dym_002",
+    "name": "Elite 100% Whey Protein",
+    "brand": "Dymatize",
+    "category": "Whey Isolate Blend",
+    "description": "Fast-absorbing whey concentrate & isolate blend designed for serious athletes seeking muscle gain.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 36, "calories": 140, "proteinGrams": 25, "carbsGrams": 3.0, "fatGrams": 2.0, "bcaaGrams": 5.5, "eaaGrams": 11.4 },
+    "variants": [
+      { "id": "var_dym_002_1", "sku": "DYM-ELITE-CHO-907G", "flavor": "Rich Chocolate", "weightGrams": 907, "priceInr": 3899, "mrpInr": 4599, "stockQuantity": 60, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Dymatize Elite 100% Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_asitis_001",
+    "name": "100% Raw Whey Protein Concentrate",
+    "brand": "AS-IT-IS Nutrition",
+    "category": "Raw Whey",
+    "description": "Unflavored, cold-processed pure 80% raw whey concentrate without sugar or artificial chemicals.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 120, "proteinGrams": 24, "carbsGrams": 2.5, "fatGrams": 1.5, "bcaaGrams": 5.4, "eaaGrams": 10.9 },
+    "variants": [
+      { "id": "var_asitis_001_1", "sku": "ASI-RAW-WHEY-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 1849, "mrpInr": 2399, "stockQuantity": 180, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "AS-IT-IS Raw Whey Concentrate" }] }
+    ]
+  },
+  {
+    "id": "prod_asitis_002",
+    "name": "100% Pure Whey Isolate",
+    "brand": "AS-IT-IS Nutrition",
+    "category": "Whey Isolate",
+    "description": "90% pure whey protein isolate providing maximum protein yield per scoop for cutting cycles.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 110, "proteinGrams": 27, "carbsGrams": 0.4, "fatGrams": 0.2, "bcaaGrams": 5.9, "eaaGrams": 12.2 },
+    "variants": [
+      { "id": "var_asitis_002_1", "sku": "ASI-RAW-ISO-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 2599, "mrpInr": 3199, "stockQuantity": 110, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "AS-IT-IS Pure Whey Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_asitis_003",
+    "name": "100% Pea Protein Isolate",
+    "brand": "AS-IT-IS Nutrition",
+    "category": "Plant Protein",
+    "description": "Hypoallergenic vegan pea protein isolate delivering 28g protein per scoop for plant-focused athletes.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 120, "proteinGrams": 28, "carbsGrams": 1.1, "fatGrams": 0.8, "bcaaGrams": 4.9, "eaaGrams": 10.1 },
+    "variants": [
+      { "id": "var_asitis_003_1", "sku": "ASI-PEA-ISO-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 1299, "mrpInr": 1699, "stockQuantity": 130, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "AS-IT-IS Pea Protein Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_asitis_004",
+    "name": "100% Soy Protein Isolate",
+    "brand": "AS-IT-IS Nutrition",
+    "category": "Plant Protein",
+    "description": "High-purity soy isolate containing complete amino acid spectrum ideal for vegan meal addition.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 114, "proteinGrams": 27, "carbsGrams": 0.8, "fatGrams": 0.5, "bcaaGrams": 4.4, "eaaGrams": 9.2 },
+    "variants": [
+      { "id": "var_asitis_004_1", "sku": "ASI-SOY-ISO-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 999, "mrpInr": 1399, "stockQuantity": 140, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "AS-IT-IS Soy Protein Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_006",
+    "name": "Whey Gold 100% Whey Isolate",
+    "brand": "MuscleBlaze",
+    "category": "Whey Isolate",
+    "description": "Pure whey isolate featuring imported raw ingredients and labdoor purity certification.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 109, "proteinGrams": 27, "carbsGrams": 0.4, "fatGrams": 0.1, "bcaaGrams": 5.8, "eaaGrams": 12.3 },
+    "variants": [
+      { "id": "var_mb_006_1", "sku": "MB-WG-RIC-1KG", "flavor": "Rich Milk Chocolate", "weightGrams": 1000, "priceInr": 3799, "mrpInr": 4499, "stockQuantity": 70, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Whey Gold 100%" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_007",
+    "name": "Biozyme Whey PR",
+    "brand": "MuscleBlaze",
+    "category": "Whey Protein",
+    "description": "Enhanced absorption formula enriched with AstraGin for maximizing personal record recovery speed.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 36, "calories": 136, "proteinGrams": 26, "carbsGrams": 2.5, "fatGrams": 1.4, "bcaaGrams": 5.7, "eaaGrams": 12.0 },
+    "variants": [
+      { "id": "var_mb_007_1", "sku": "MB-PR-MOL-1KG", "flavor": "Molten Chocolate Cake", "weightGrams": 1000, "priceInr": 3199, "mrpInr": 3899, "stockQuantity": 80, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Biozyme Whey PR" }] }
+    ]
+  },
+  {
+    "id": "prod_mb_008",
+    "name": "Plant Protein Powder",
+    "brand": "MuscleBlaze",
+    "category": "Plant Protein",
+    "description": "Vegan pea & pumpkin seed protein enriched with Green Tea and Cranberry extracts.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 124, "proteinGrams": 24, "carbsGrams": 2.8, "fatGrams": 1.8, "bcaaGrams": 4.6, "eaaGrams": 9.8 },
+    "variants": [
+      { "id": "var_mb_008_1", "sku": "MB-PLANT-CHO-1KG", "flavor": "Chocolate", "weightGrams": 1000, "priceInr": 2299, "mrpInr": 2899, "stockQuantity": 60, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "MuscleBlaze Plant Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_on_005",
+    "name": "100% Casein Protein",
+    "brand": "Optimum Nutrition",
+    "category": "Casein Protein",
+    "description": "Slow-digesting micellar casein providing prolonged amino acid delivery during overnight sleep.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 120, "proteinGrams": 24, "carbsGrams": 3.0, "fatGrams": 1.0, "bcaaGrams": 4.9, "eaaGrams": 10.2 },
+    "variants": [
+      { "id": "var_on_005_1", "sku": "ON-CAS-CHO-907G", "flavor": "Chocolate Supreme", "weightGrams": 907, "priceInr": 4299, "mrpInr": 4999, "stockQuantity": 40, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ON Gold Standard Casein" }] }
+    ]
+  },
+  {
+    "id": "prod_avatar_004",
+    "name": "Avvatar Muscle Gainer",
+    "brand": "Avvatar",
+    "category": "Mass Gainer",
+    "description": "High-protein mass gainer engineered with 1:2 protein-to-carbohydrate ratio for structured lean bulking.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 60, "calories": 230, "proteinGrams": 24, "carbsGrams": 30.0, "fatGrams": 2.2, "bcaaGrams": 5.1, "eaaGrams": 10.5 },
+    "variants": [
+      { "id": "var_avatar_004_1", "sku": "AVT-GAIN-CHO-1KG", "flavor": "Chocolate Hazelnut", "weightGrams": 1000, "priceInr": 1999, "mrpInr": 2499, "stockQuantity": 90, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Avvatar Muscle Gainer" }] }
+    ]
+  },
+  {
+    "id": "prod_nb_004",
+    "name": "Nutrabay Pure 100% Micellar Casein",
+    "brand": "Nutrabay",
+    "category": "Casein Protein",
+    "description": "Sustained anti-catabolic protein formula tailored for bedtime night recovery.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 112, "proteinGrams": 25, "carbsGrams": 1.2, "fatGrams": 0.8, "bcaaGrams": 4.8, "eaaGrams": 9.9 },
+    "variants": [
+      { "id": "var_nb_004_1", "sku": "NB-CAS-UNF-1KG", "flavor": "Unflavored", "weightGrams": 1000, "priceInr": 2299, "mrpInr": 2899, "stockQuantity": 70, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Nutrabay Micellar Casein" }] }
+    ]
+  },
+  {
+    "id": "prod_nb_005",
+    "name": "Nutrabay Gold Tri-Blend Whey",
+    "brand": "Nutrabay",
+    "category": "Whey Blend",
+    "description": "Multi-stage release formula combining Whey Isolate, Whey Concentrate, and Hydrolyzed Whey.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 33, "calories": 128, "proteinGrams": 25, "carbsGrams": 2.5, "fatGrams": 1.8, "bcaaGrams": 5.4, "eaaGrams": 11.2 },
+    "variants": [
+      { "id": "var_nb_005_1", "sku": "NB-TRI-CHO-1KG", "flavor": "Rich Chocolate", "weightGrams": 1000, "priceInr": 1999, "mrpInr": 2599, "stockQuantity": 110, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Nutrabay Tri-Blend Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_mp_003",
+    "name": "Clear Whey Isolate",
+    "brand": "Myprotein",
+    "category": "Whey Isolate",
+    "description": "Light and refreshing juice-style clear whey protein isolate with zero milky texture.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 25, "calories": 85, "proteinGrams": 20, "carbsGrams": 0.8, "fatGrams": 0.1, "bcaaGrams": 4.0, "eaaGrams": 8.8 },
+    "variants": [
+      { "id": "var_mp_003_1", "sku": "MP-CLEAR-PEA-500G", "flavor": "Peach Tea", "weightGrams": 500, "priceInr": 2899, "mrpInr": 3499, "stockQuantity": 50, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Myprotein Clear Whey Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_sy_002",
+    "name": "Superyou Whey Isolate",
+    "brand": "Superyou",
+    "category": "Whey Isolate",
+    "description": "Clean label lactose-free whey isolate infused with digestive enzymes and zero artificial preservatives.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 112, "proteinGrams": 27, "carbsGrams": 0.8, "fatGrams": 0.4, "bcaaGrams": 5.9, "eaaGrams": 12.1 },
+    "variants": [
+      { "id": "var_sy_002_1", "sku": "SY-ISO-VAN-1KG", "flavor": "Vanilla Bean", "weightGrams": 1000, "priceInr": 3299, "mrpInr": 3999, "stockQuantity": 65, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Superyou Whey Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_twt_003",
+    "name": "Clean Vegan Plant Protein",
+    "brand": "The Whole Truth",
+    "category": "Plant Protein",
+    "description": "100% plant-based pea & rice protein sweetened exclusively with date powder and real cocoa.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 35, "calories": 135, "proteinGrams": 24, "carbsGrams": 5.0, "fatGrams": 1.9, "bcaaGrams": 4.6, "eaaGrams": 9.5 },
+    "variants": [
+      { "id": "var_twt_003_1", "sku": "TWT-VEG-CHO-1KG", "flavor": "Dark Cocoa", "weightGrams": 1000, "priceInr": 3499, "mrpInr": 3999, "stockQuantity": 55, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "The Whole Truth Clean Vegan Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_tb_003",
+    "name": "Truebasics Plant Protein",
+    "brand": "Truebasics",
+    "category": "Plant Protein",
+    "description": "Pea and mung bean vegan blend boosted with digestive enzymes and organic supergreens.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 34, "calories": 128, "proteinGrams": 25, "carbsGrams": 3.0, "fatGrams": 1.5, "bcaaGrams": 4.8, "eaaGrams": 10.0 },
+    "variants": [
+      { "id": "var_tb_003_1", "sku": "TB-VEG-CHO-1KG", "flavor": "Chocolate", "weightGrams": 1000, "priceInr": 2599, "mrpInr": 3199, "stockQuantity": 75, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Truebasics Plant Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_atom_005",
+    "name": "ATOM Pea Protein Isolate",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Plant Protein",
+    "description": "Smooth mixing vegan pea protein isolate with high bioavailability and fast muscle recovery response.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 35, "calories": 128, "proteinGrams": 29, "carbsGrams": 1.5, "fatGrams": 1.0, "bcaaGrams": 5.2, "eaaGrams": 10.8 },
+    "variants": [
+      { "id": "var_atom_005_1", "sku": "ATOM-PEA-CHO-1KG", "flavor": "Chocolate Fusion", "weightGrams": 1000, "priceInr": 1599, "mrpInr": 2199, "stockQuantity": 95, "images": [{ "url": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "ATOM Pea Protein Isolate" }] }
+    ]
+  },
+  {
+    "id": "prod_avatar_005",
+    "name": "Avvatar Alpha Whey",
+    "brand": "Avvatar",
+    "category": "Whey Protein",
+    "description": "Fortified whey protein with added vitamins and mineral complex to support joint and muscle recovery.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 35, "calories": 135, "proteinGrams": 25, "carbsGrams": 2.8, "fatGrams": 1.8, "bcaaGrams": 5.4, "eaaGrams": 11.2 },
+    "variants": [
+      { "id": "var_avatar_005_1", "sku": "AVT-ALPHA-CHO-1KG", "flavor": "Chocolate Delight", "weightGrams": 1000, "priceInr": 2399, "mrpInr": 2999, "stockQuantity": 105, "images": [{ "url": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Avvatar Alpha Whey" }] }
+    ]
+  },
+  {
+    "id": "prod_fastup_003",
+    "name": "Fast&Up Everyday Protein",
+    "brand": "Fast&Up",
+    "category": "Daily Protein",
+    "description": "Microfiltered plant and whey fusion designed for basic daily dietary protein supplementation.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 115, "proteinGrams": 18, "carbsGrams": 5.2, "fatGrams": 1.1, "bcaaGrams": 3.8, "eaaGrams": 8.1 },
+    "variants": [
+      { "id": "var_fastup_003_1", "sku": "FUP-EVERY-CHO-1KG", "flavor": "Chocolate Milkshake", "weightGrams": 1000, "priceInr": 1299, "mrpInr": 1699, "stockQuantity": 130, "images": [{ "url": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "Fast&Up Everyday Protein" }] }
+    ]
+  },
+  {
+    "id": "prod_oziva_003",
+    "name": "Protein & Herbs for Women",
+    "brand": "OZiva",
+    "category": "Ayurvedic Protein",
+    "description": "Specially formulated for women's hormonal balance and muscle tone with Shatavari and Flaxseed extracts.",
+    "isVegetarian": true,
+    "nutritionFacts": { "servingSizeGrams": 30, "calories": 114, "proteinGrams": 22, "carbsGrams": 3.2, "fatGrams": 1.0, "bcaaGrams": 4.5, "eaaGrams": 9.2 },
+    "variants": [
+      { "id": "var_oziva_003_1", "sku": "OZ-WOM-VAN-500G", "flavor": "Vanilla Almond", "weightGrams": 500, "priceInr": 1549, "mrpInr": 1899, "stockQuantity": 85, "images": [{ "url": "https://images.unsplash.com/photo-1546483875-ad9014c88eba?auto=format&fit=crop&w=800&q=80", "isPrimary": true, "altText": "OZiva Protein & Herbs for Women" }] }
+    ]
+  }
+]
