@@ -1,0 +1,83 @@
+[
+  {
+    "id": "prod_vit_001",
+    "name": "Vitamin D3 2000 IU Softgels",
+    "brand": "MuscleBlaze",
+    "category": "Single Vitamins",
+    "description": "High-potency Cholecalciferol (Vitamin D3) softgels engineered to support bone density, calcium absorption, and muscle recovery.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "vitaminD3_IU": 2000,
+      "vitaminD3_mcg": 50
+    },
+    "priceInr": 399,
+    "imageUrl": "/storage/v1/object/public/Supplies/IsolatedVitamins/prod_vit_001.jpg"
+  },
+  {
+    "id": "prod_vit_002",
+    "name": "Vitamin C 1000mg with Amla Extract & Zinc",
+    "brand": "Fast&Up",
+    "category": "Single Vitamins",
+    "description": "Effervescent Vitamin C drink tablets made with natural Amla extract and elemental Zinc to strengthen immune defenses and skin collagen synthesis.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 20,
+      "vitaminC_mg": 1000,
+      "zinc_mg": 10,
+      "amlaExtract_mg": 100
+    },
+    "priceInr": 349,
+    "imageUrl": "/storage/v1/object/public/Supplies/IsolatedVitamins/prod_vit_002.jpg"
+  },
+  {
+    "id": "prod_vit_003",
+    "name": "Vitamin B12 Sublingual Melt Tablets",
+    "brand": "Truebasics",
+    "category": "Single Vitamins",
+    "description": "Fast-absorbing Methylcobalamin (active form of B12) sublingual tablets to prevent nerve fatigue and support red blood cell formation.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 60,
+      "vitaminB12_mcg": 1500,
+      "activeForm": "Methylcobalamin"
+    },
+    "priceInr": 599,
+    "imageUrl": "/storage/v1/object/public/Supplies/IsolatedVitamins/prod_vit_003.jpg"
+  },
+  {
+    "id": "prod_vit_004",
+    "name": "Vitamin E 400 IU Evion-style Softgels",
+    "brand": "Nutrabay",
+    "category": "Single Vitamins",
+    "description": "Pure d-Alpha Tocopherol Vitamin E softgel capsules to protect tissue cells from oxidative damage and maintain skin moisture.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "vitaminE_IU": 400,
+      "vitaminE_mg": 268
+    },
+    "priceInr": 299,
+    "imageUrl": "/storage/v1/object/public/Supplies/IsolatedVitamins/prod_vit_004.jpg"
+  },
+  {
+    "id": "prod_vit_005",
+    "name": "Vitamin D3 + K2 (MK-7)",
+    "brand": "Optimum Nutrition",
+    "category": "Single Vitamins",
+    "description": "Synergistic pair of Vitamin D3 (5000 IU) and Menaquinone-7 (Vitamin K2) to ensure calcium is directed into bones rather than arterial walls.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "vitaminD3_IU": 5000,
+      "vitaminK2_MK7_mcg": 100
+    },
+    "priceInr": 1299,
+    "imageUrl": "/storage/v1/object/public/Supplies/IsolatedVitamins/prod_vit_005.jpg"
+  }
+]

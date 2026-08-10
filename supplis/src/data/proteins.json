@@ -1,0 +1,478 @@
+[
+  {
+    "id": "prod_prot_001",
+    "name": "ATOM Whey Protein",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Whey Protein",
+    "description": "Labdoor USA certified whey protein concentrate and isolate blend with digestive enzymes for fast muscle recovery.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 36,
+      "calories": 136,
+      "proteinGrams": 27,
+      "carbsGrams": 2.5,
+      "fatGrams": 1.5,
+      "bcaaGrams": 5.7,
+      "eaaGrams": 12.2
+    },
+    "priceInr": 2199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_001.jpg"
+  },
+  {
+    "id": "prod_prot_002",
+    "name": "ATOM Whey Protein Isolate",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Whey Isolate",
+    "description": "Ultra-pure fast acting isolate delivering 29g protein with minimal carbs and zero sugar.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 35,
+      "calories": 128,
+      "proteinGrams": 29,
+      "carbsGrams": 1.2,
+      "fatGrams": 0.5,
+      "bcaaGrams": 6.1,
+      "eaaGrams": 12.9
+    },
+    "priceInr": 2899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_002.jpg"
+  },
+  {
+    "id": "prod_prot_003",
+    "name": "ATOM Performance Whey",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Whey Protein",
+    "description": "Performance whey blend powered by Safed Musli and Tribulus for boosting strength and endurance.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 36,
+      "calories": 138,
+      "proteinGrams": 25,
+      "carbsGrams": 3.8,
+      "fatGrams": 1.8,
+      "bcaaGrams": 5.4,
+      "eaaGrams": 11.5
+    },
+    "priceInr": 1999,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_003.jpg"
+  },
+  {
+    "id": "prod_prot_004",
+    "name": "ATOM Beginners Whey Protein",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Beginners Whey",
+    "description": "Formulated for gym novices with light digestive profile and easy macro absorption.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 32,
+      "calories": 122,
+      "proteinGrams": 20,
+      "carbsGrams": 6.5,
+      "fatGrams": 1.2,
+      "bcaaGrams": 4.2,
+      "eaaGrams": 9.1
+    },
+    "priceInr": 1499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_004.jpg"
+  },
+  {
+    "id": "prod_prot_005",
+    "name": "Avvatar Absolute 100% Whey Protein",
+    "brand": "Avvatar",
+    "category": "Whey Protein",
+    "description": "Made from fresh cow milk within 24 hours. Packed with naturally occurring BCAAs and EAAs.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 35,
+      "calories": 134,
+      "proteinGrams": 24,
+      "carbsGrams": 2.3,
+      "fatGrams": 1.9,
+      "bcaaGrams": 5.5,
+      "eaaGrams": 11.4
+    },
+    "priceInr": 2599,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_005.jpg"
+  },
+  {
+    "id": "prod_prot_006",
+    "name": "Avvatar Isolate 100% Whey Protein",
+    "brand": "Avvatar",
+    "category": "Whey Isolate",
+    "description": "Pure whey protein isolate offering rapid digestibility and 28g protein per scoop.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 33,
+      "calories": 120,
+      "proteinGrams": 28,
+      "carbsGrams": 1.0,
+      "fatGrams": 0.4,
+      "bcaaGrams": 6.2,
+      "eaaGrams": 13.0
+    },
+    "priceInr": 3299,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_006.jpg"
+  },
+  {
+    "id": "prod_prot_007",
+    "name": "Avvatar Unflavored Raw Whey",
+    "brand": "Avvatar",
+    "category": "Raw Whey",
+    "description": "Zero flavor additives, zero sweetener raw whey concentrate directly processed from grass-fed fresh milk.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 121,
+      "proteinGrams": 24,
+      "carbsGrams": 1.8,
+      "fatGrams": 1.5,
+      "bcaaGrams": 5.3,
+      "eaaGrams": 10.9
+    },
+    "priceInr": 2199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_007.jpg"
+  },
+  {
+    "id": "prod_prot_008",
+    "name": "Biozyme Performance Whey",
+    "brand": "MuscleBlaze",
+    "category": "Whey Protein",
+    "description": "Clinically tested enhanced absorption formula with proprietary EAAB blend specifically designed for Indian diets.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 36,
+      "calories": 138,
+      "proteinGrams": 25,
+      "carbsGrams": 3.0,
+      "fatGrams": 1.5,
+      "bcaaGrams": 5.51,
+      "eaaGrams": 11.75
+    },
+    "priceInr": 2899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_008.webp"
+  },
+  {
+    "id": "prod_prot_009",
+    "name": "Biozyme Iso-Zero",
+    "brand": "MuscleBlaze",
+    "category": "Whey Isolate",
+    "description": "Zero carb, zero lactose pure whey isolate ideal for lactose sensitive individuals on strict low-calorie cuts.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 31.5,
+      "calories": 114,
+      "proteinGrams": 27,
+      "carbsGrams": 0.2,
+      "fatGrams": 0.3,
+      "bcaaGrams": 5.9,
+      "eaaGrams": 12.4
+    },
+    "priceInr": 3899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_009.jpg"
+  },
+  {
+    "id": "prod_prot_010",
+    "name": "Biozyme Gold 100% Whey",
+    "brand": "MuscleBlaze",
+    "category": "Whey Protein",
+    "description": "Premium imported isolate & concentrate blend certified by Informed Choice UK.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 34,
+      "calories": 130,
+      "proteinGrams": 25,
+      "carbsGrams": 2.2,
+      "fatGrams": 1.4,
+      "bcaaGrams": 5.6,
+      "eaaGrams": 11.8
+    },
+    "priceInr": 3299,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_010.jpg"
+  },
+  {
+    "id": "prod_prot_011",
+    "name": "Raw Whey Protein 80%",
+    "brand": "MuscleBlaze",
+    "category": "Raw Whey",
+    "description": "Unflavored and unsweetened 80% whey concentrate without any added preservatives or processing.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 120,
+      "proteinGrams": 24,
+      "carbsGrams": 2.1,
+      "fatGrams": 1.5,
+      "bcaaGrams": 5.2,
+      "eaaGrams": 10.8
+    },
+    "priceInr": 2199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_011.jpg"
+  },
+  {
+    "id": "prod_prot_012",
+    "name": "Beginner's Whey Protein",
+    "brand": "MuscleBlaze",
+    "category": "Beginners Whey",
+    "description": "Balanced protein-to-carbohydrate formula tailored for beginners entering high-volume strength training.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 111,
+      "proteinGrams": 12,
+      "carbsGrams": 12.8,
+      "fatGrams": 1.5,
+      "bcaaGrams": 2.65,
+      "eaaGrams": 5.64
+    },
+    "priceInr": 1499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_012.jpg"
+  },
+  {
+    "id": "prod_prot_013",
+    "name": "Gold Standard 100% Whey",
+    "brand": "Optimum Nutrition",
+    "category": "Whey Isolate Blend",
+    "description": "The world's benchmark post-workout protein blend powered by premium Whey Protein Isolate.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30.4,
+      "calories": 117,
+      "proteinGrams": 24,
+      "carbsGrams": 3.0,
+      "fatGrams": 1.0,
+      "bcaaGrams": 5.5,
+      "eaaGrams": 11.0
+    },
+    "priceInr": 3899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_013.jpg"
+  },
+  {
+    "id": "prod_prot_014",
+    "name": "Gold Standard 100% Isolate",
+    "brand": "Optimum Nutrition",
+    "category": "Whey Isolate",
+    "description": "Hydrolyzed & ultra-filtered whey protein isolate for ultra-fast amino acid absorption.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 110,
+      "proteinGrams": 25,
+      "carbsGrams": 1.0,
+      "fatGrams": 0.5,
+      "bcaaGrams": 5.5,
+      "eaaGrams": 11.8
+    },
+    "priceInr": 4899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_014.jpg"
+  },
+  {
+    "id": "prod_prot_015",
+    "name": "Performance Whey Protein",
+    "brand": "Optimum Nutrition",
+    "category": "Whey Concentrate",
+    "description": "Ultra-filtered all-whey blend designed for cost-effective everyday athletic performance.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 34,
+      "calories": 130,
+      "proteinGrams": 24,
+      "carbsGrams": 4.0,
+      "fatGrams": 2.0,
+      "bcaaGrams": 5.0,
+      "eaaGrams": 10.5
+    },
+    "priceInr": 3199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_015.jpg"
+  },
+  {
+    "id": "prod_prot_016",
+    "name": "Gold Standard 100% Plant Protein",
+    "brand": "Optimum Nutrition",
+    "category": "Plant Protein",
+    "description": "100% vegan protein blend derived from pea, rice, and sacha inchi organic seeds.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 36,
+      "calories": 140,
+      "proteinGrams": 24,
+      "carbsGrams": 5.0,
+      "fatGrams": 2.5,
+      "bcaaGrams": 4.0,
+      "eaaGrams": 9.0
+    },
+    "priceInr": 3499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_016.jpg"
+  },
+  {
+    "id": "prod_prot_017",
+    "name": "100% Clean Whey Isolate & Concentrate",
+    "brand": "The Whole Truth",
+    "category": "Clean Whey",
+    "description": "Zero artificial sweeteners or stevia. Sweetened only with naturally dried dates and real cocoa.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 32,
+      "calories": 130,
+      "proteinGrams": 24,
+      "carbsGrams": 4.5,
+      "fatGrams": 1.8,
+      "bcaaGrams": 5.4,
+      "eaaGrams": 11.2
+    },
+    "priceInr": 3887,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_017.jpg"
+  },
+  {
+    "id": "prod_prot_018",
+    "name": "Unflavored Clean Raw Whey",
+    "brand": "The Whole Truth",
+    "category": "Raw Whey",
+    "description": "100% unflavored cold-processed whey isolate and concentrate blend with zero additives.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 118,
+      "proteinGrams": 26,
+      "carbsGrams": 0.8,
+      "fatGrams": 1.2,
+      "bcaaGrams": 5.7,
+      "eaaGrams": 12.1
+    },
+    "priceInr": 3299,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_018.webp"
+  },
+  {
+    "id": "prod_prot_019",
+    "name": "100% Raw Whey Protein",
+    "brand": "Truebasics",
+    "category": "Raw Whey",
+    "description": "Pure unflavored European whey protein concentrate blended with multi-enzyme DigeZyme complex.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 120,
+      "proteinGrams": 24,
+      "carbsGrams": 2.1,
+      "fatGrams": 1.8,
+      "bcaaGrams": 5.2,
+      "eaaGrams": 10.8
+    },
+    "priceInr": 2399,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_019.jpg"
+  },
+  {
+    "id": "prod_prot_020",
+    "name": "Truebasics Ultra Whey Isolate",
+    "brand": "Truebasics",
+    "category": "Whey Isolate",
+    "description": "Grass-fed whey isolate boosted with clinically proven Nutra-Pro enzyme blend for 90%+ protein density.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 31,
+      "calories": 115,
+      "proteinGrams": 27,
+      "carbsGrams": 1.1,
+      "fatGrams": 0.4,
+      "bcaaGrams": 5.8,
+      "eaaGrams": 12.3
+    },
+    "priceInr": 3499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_020.jpg"
+  },
+  {
+    "id": "prod_prot_021",
+    "name": " Power Protein",
+    "brand": "Superyou",
+    "category": "Yeast Protein",
+    "description": "100% Vegan plant-based protein crafted from pea protein isolate and brown rice protein concentrate.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 33,
+      "calories": 125,
+      "proteinGrams": 25,
+      "carbsGrams": 3.2,
+      "fatGrams": 1.2,
+      "bcaaGrams": 4.8,
+      "eaaGrams": 9.9
+    },
+    "priceInr": 2699,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_021.jpg"
+  },
+  {
+    "id": "prod_prot_022",
+    "name": "Nutrabay Gold Whey Protein Concentrate",
+    "brand": "Nutrabay",
+    "category": "Whey Protein",
+    "description": "Cross-flow microfiltered whey concentrate providing 25g protein per serving at budget-friendly pricing.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 33,
+      "calories": 131,
+      "proteinGrams": 25,
+      "carbsGrams": 2.8,
+      "fatGrams": 2.1,
+      "bcaaGrams": 5.3,
+      "eaaGrams": 11.1
+    },
+    "priceInr": 1899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_022.jpg"
+  },
+  {
+    "id": "prod_prot_023",
+    "name": "Nutrabay Pure Whey Protein Isolate",
+    "brand": "Nutrabay",
+    "category": "Whey Isolate",
+    "description": "Unflavored 100% microfiltered isolate with zero artificial colors, sweeteners, or fillers.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 30,
+      "calories": 111,
+      "proteinGrams": 27,
+      "carbsGrams": 0.5,
+      "fatGrams": 0.3,
+      "bcaaGrams": 6.0,
+      "eaaGrams": 12.6
+    },
+    "priceInr": 2499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_023.jpg"
+  },
+  {
+    "id": "prod_prot_024",
+    "name": "Nutrabay Wellness Vegan Plant Protein",
+    "brand": "Nutrabay",
+    "category": "Plant Protein",
+    "description": "Pea and pea isolate blend naturally sweetened with organic stevia and added superfoods.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 34,
+      "calories": 128,
+      "proteinGrams": 24,
+      "carbsGrams": 3.1,
+      "fatGrams": 1.6,
+      "bcaaGrams": 4.5,
+      "eaaGrams": 9.4
+    },
+    "priceInr": 1699,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_024.jpg"
+  },
+  {
+    "id": "prod_prot_025",
+    "name": "Impact Whey Protein",
+    "brand": "Myprotein",
+    "category": "Whey Concentrate",
+    "description": "Europe's bestseller featuring high-grade grass-fed cow whey in over 20 global flavors.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 25,
+      "calories": 103,
+      "proteinGrams": 21,
+      "carbsGrams": 1.0,
+      "fatGrams": 1.9,
+      "bcaaGrams": 4.5,
+      "eaaGrams": 9.2
+    },
+    "priceInr": 2999,
+    "imageUrl": "/storage/v1/object/public/Supplies/Proteins/prod_prot_025.jpg"
+  }
+
+]

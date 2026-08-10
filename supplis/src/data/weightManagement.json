@@ -1,0 +1,87 @@
+[
+  {
+    "id": "prod_wm_001",
+    "name": "L-Carnitine XS 3000 Liquid",
+    "brand": "Ronnie Coleman Signature Series",
+    "category": "L-Carnitine",
+    "description": "High-potency liquid L-Carnitine delivering 3000mg per serving to assist fatty acid transportation into mitochondria for energy conversion.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeMl": 15,
+      "servingsPerContainer": 31,
+      "lCarnitineMg": 3000,
+      "pantothenicAcidMg": 10,
+      "calories": 0
+    },
+    "priceInr": 1899,
+    "imageUrl": "/storage/v1/object/public/Supplies/WeightManagement/prod_wm_001.png"
+  },
+  {
+    "id": "prod_wm_002",
+    "name": "L-Carnitine L-Tartrate 500mg Capsules",
+    "brand": "MuscleBlaze",
+    "category": "L-Carnitine",
+    "description": "Fast-acting L-Carnitine L-Tartrate capsules designed to promote cellular energy metabolism and support fat oxidation during workouts.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "lCarnitineLTartrateMg": 500,
+      "calories": 0
+    },
+    "priceInr": 649,
+    "imageUrl": "/storage/v1/object/public/Supplies/WeightManagement/prod_wm_002.webp"
+  },
+  {
+    "id": "prod_wm_003",
+    "name": "Signature CLA 1250mg Softgels",
+    "brand": "Dexter Jackson",
+    "category": "CLA (Conjugated Linoleic Acid)",
+    "description": "High-yield Safflower Seed Oil derived Conjugated Linoleic Acid (CLA) engineered to reduce body fat retention and support lean muscle integrity.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 90,
+      "safflowerSeedOilMg": 1250,
+      "activeClaMg": 1000,
+      "calories": 10
+    },
+    "priceInr": 1699,
+    "imageUrl": "/storage/v1/object/public/Supplies/WeightManagement/prod_wm_001.jpg"
+  },
+  {
+    "id": "prod_wm_004",
+    "name": "Lipo-6 Black Ultra Concentrate",
+    "brand": "Nutrex Research",
+    "category": "Thermogenic Fat Burner",
+    "description": "Ultra-concentrated fat burner liquid capsules offering metabolic stimulation, appetite regulation, and energy focus.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "caffeineAnhydrousMg": 200,
+      "theobromineMg": 100,
+      "yohimbineHclMg": 3,
+      "rauwolscineMg": 1.5
+    },
+    "priceInr": 2299,
+    "imageUrl": "/storage/v1/object/public/Supplies/WeightManagement/prod_wm_004.jpg"
+  },
+  {
+    "id": "prod_wm_005",
+    "name": "L-Carnitine 1500mg Liquid",
+    "brand": "Fast&Up",
+    "category": "L-Carnitine",
+    "description": "Fast-absorbing Carnipure liquid shots enriched with Vitamin B6 to assist fat transportation and prevent workout fatigue.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeMl": 15,
+      "servingsPerContainer": 30,
+      "lCarnitineMg": 1500,
+      "vitaminB6mg": 2.0,
+      "calories": 0
+    },
+    "priceInr": 799,
+    "imageUrl": "/storage/v1/object/public/Supplies/WeightManagement/prod_wm_005.jpg"
+  }
+]

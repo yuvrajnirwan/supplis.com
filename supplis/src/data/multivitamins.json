@@ -1,0 +1,104 @@
+[
+  {
+    "id": "prod_multi_001",
+    "name": "MB-Vite Daily Multivitamin",
+    "brand": "MuscleBlaze",
+    "category": "Multivitamins",
+    "description": "Comprehensive daily formula packed with 25 essential vitamins and minerals, digestive enzymes, and antioxidant blends to boost energy and immunity.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 60,
+      "vitaminA_mcg": 600,
+      "vitaminC_mg": 40,
+      "vitaminD3_IU": 400,
+      "vitaminB12_mcg": 2.2,
+      "zinc_mg": 12,
+      "iron_mg": 17,
+      "digestiveEnzymeBlend_mg": 50
+    },
+    "priceInr": 499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Multivitamins/prod_multi_001.jpg"
+  },
+  {
+    "id": "prod_multi_002",
+    "name": "Opti-Men High Performance Multivitamin",
+    "brand": "Optimum Nutrition",
+    "category": "Multivitamins",
+    "description": "Nutrient optimization system delivering 75+ active ingredients across 4 performance blends designed specifically for active males.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeTablets": 3,
+      "servingsPerContainer": 30,
+      "vitaminA_mcg": 3000,
+      "vitaminC_mg": 300,
+      "vitaminD3_IU": 1500,
+      "vitaminB12_mcg": 100,
+      "zinc_mg": 15,
+      "aminoAcidBlend_mg": 1000
+    },
+    "priceInr": 2199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Multivitamins/prod_multi_002.jpg"
+  },
+  {
+    "id": "prod_multi_003",
+    "name": "Multivitamin for Men with Omega 3 & Herbal Extracts",
+    "brand": "Truebasics",
+    "category": "Multivitamins",
+    "description": "Scientifically formulated multivitamin with 100% RDA of essential nutrients, Ashwagandha, Ginseng, and Omegas for joint, heart, and stamina support.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 30,
+      "vitaminA_mcg": 800,
+      "vitaminC_mg": 80,
+      "vitaminD3_IU": 600,
+      "vitaminB12_mcg": 2.2,
+      "zinc_mg": 12,
+      "omega3_mg": 250,
+      "ashwagandhaExtract_mg": 50
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Multivitamins/prod_multi_003.jpg"
+  },
+  {
+    "id": "prod_multi_004",
+    "name": "Vitalize Daily Multivitamin Effervescent",
+    "brand": "Fast&Up",
+    "category": "Effervescent Vitamins",
+    "description": "Fizzy, fast-acting effervescent drink tablets enriched with 12 vitamins, 9 minerals, and natural beetroot extract for instant nutrient absorption.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 20,
+      "vitaminA_mcg": 600,
+      "vitaminC_mg": 40,
+      "vitaminD3_IU": 400,
+      "vitaminB12_mcg": 1.0,
+      "zinc_mg": 10,
+      "iron_mg": 10
+    },
+    "priceInr": 399,
+    "imageUrl": "/storage/v1/object/public/Supplies/Multivitamins/prod_multi_004.jpg"
+  },
+  {
+    "id": "prod_multi_005",
+    "name": "Daily Men's Multi-Plant Extract Capsules",
+    "brand": "OZiva",
+    "category": "Plant-Based Multivitamins",
+    "description": "Clean, 100% plant-based multivitamin powered by Wholefood extracts (Amla, Spinach, Guava) and standardized Ayurvedic herbs for overall vitality.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 60,
+      "vitaminA_mcg": 600,
+      "vitaminC_mg": 40,
+      "vitaminD3_IU": 400,
+      "vitaminB12_mcg": 2.2,
+      "zinc_mg": 10,
+      "wholefoodBlend_mg": 150
+    },
+    "priceInr": 649,
+    "imageUrl": "/storage/v1/object/public/Supplies/Multivitamins/prod_multi_005.jpg"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "prod_salt_001",
+    "name": "Salts Electrolyte Mix",
+    "brand": "Supply6",
+    "category": "Hydration Salts",
+    "description": "Zero added sugar electrolyte drink mix formulated for 3x faster hydration. Packed with Himalayan Pink Salt, Magnesium, Potassium, and Vitamin C.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 6,
+      "servingsPerContainer": 30,
+      "calories": 10,
+      "sodiumMg": 500,
+      "potassiumMg": 200,
+      "magnesiumMg": 60,
+      "calciumMg": 40,
+      "vitaminCmg": 50
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Salts/prod_salt_001.jpg"
+  },
+  {
+    "id": "prod_salt_002",
+    "name": "Fuel One Hydr8 Isotonic Instant Energy",
+    "brand": "MuscleBlaze",
+    "category": "Isotonic Salts",
+    "description": "Instant rehydration formula powered by 1082mg essential electrolytes, dextrose, and added BCAAs to replenish lost mineral salts during intense heat or exercise.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 34,
+      "servingsPerContainer": 29,
+      "calories": 126,
+      "sodiumMg": 310,
+      "potassiumMg": 95,
+      "magnesiumMg": 18,
+      "chlorideMg": 480,
+      "carbsGrams": 31.5
+    },
+    "priceInr": 549,
+    "imageUrl": "/storage/v1/object/public/Supplies/Salts/prod_salt_002.jpg"
+  },
+  {
+    "id": "prod_salt_003",
+    "name": "Essential Electrolytes Powder",
+    "brand": "Optimum Nutrition",
+    "category": "Hydration Salts",
+    "description": "Premium intra-workout hydration salt formula designed for rapid fluid retention, mineral replacement, and muscle cramp prevention.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 8,
+      "servingsPerContainer": 30,
+      "calories": 15,
+      "sodiumMg": 360,
+      "potassiumMg": 220,
+      "magnesiumMg": 75,
+      "calciumMg": 50,
+      "vitaminCmg": 90
+    },
+    "priceInr": 1499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Salts/prod_salt_003.jpg"
+  },
+  {
+    "id": "prod_salt_004",
+    "name": "Reload Instant Electrolyte Tablets",
+    "brand": "Fast&Up",
+    "category": "Hydration Salts",
+    "description": "Effervescent salt tablets providing hypotonic hydration with a balanced ratio of 5 vital electrolytes (Sodium, Potassium, Magnesium, Calcium, Chloride).",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 4,
+      "servingsPerContainer": 20,
+      "calories": 10,
+      "sodiumMg": 180,
+      "potassiumMg": 77,
+      "magnesiumMg": 20,
+      "calciumMg": 12.5,
+      "chlorideMg": 122.5
+    },
+    "priceInr": 349,
+    "imageUrl": "/storage/v1/object/public/Supplies/Salts/prod_salt_004.jpg"
+  },
+  {
+    "id": "prod_salt_005",
+    "name": "Pure Electrolyte Salt Powder",
+    "brand": "Nutrabay",
+    "category": "Hydration Salts",
+    "description": "Zero carb, unflavored pure electrolyte salt blend (Sodium Chloride, Potassium Citrate, Magnesium Sulfate) ideal for keto diets and intense fasting support.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 5,
+      "servingsPerContainer": 50,
+      "calories": 0,
+      "sodiumMg": 450,
+      "potassiumMg": 250,
+      "magnesiumMg": 100,
+      "calciumMg": 60,
+      "carbsGrams": 0
+    },
+    "priceInr": 599,
+    "imageUrl": "/storage/v1/object/public/Supplies/Salts/prod_salt_005.jpg"
+  }
+]

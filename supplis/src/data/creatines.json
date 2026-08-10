@@ -1,0 +1,82 @@
+[
+  {
+    "id": "prod_crt_001",
+    "name": "MB CreAMP Micronised Creatine Monohydrate",
+    "brand": "MuscleBlaze",
+    "category": "Creatine Monohydrate",
+    "description": "Patent-pending CreAMP formula engineered with 100% pure micronized creatine monohydrate to maximize ATP regeneration and muscle strength.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 3,
+      "servingsPerContainer": 83,
+      "creatineMonohydrateGrams": 3,
+      "calories": 0
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Creatines/prod_crt_001.jpg"
+  },
+  {
+    "id": "prod_crt_002",
+    "name": "Micronized Creatine Powder",
+    "brand": "Optimum Nutrition",
+    "category": "Creatine Monohydrate",
+    "description": "Ultra-pure 100% Creapure micronized creatine monohydrate supporting muscle power, endurance, and power output during high-intensity training.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 3,
+      "servingsPerContainer": 83,
+      "creatineMonohydrateGrams": 3,
+      "calories": 0
+    },
+    "priceInr": 1199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Creatines/prod_crt_002.jpg"
+  },
+  {
+    "id": "prod_crt_003",
+    "name": "ATOM Pure Creatine Monohydrate",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Creatine Monohydrate",
+    "description": "200 mesh micro-granulated creatine monohydrate offering rapid solubility and zero stomach bloating.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 3,
+      "servingsPerContainer": 83,
+      "creatineMonohydrateGrams": 3,
+      "calories": 0
+    },
+    "priceInr": 599,
+    "imageUrl": "/storage/v1/object/public/Supplies/Creatines/prod_crt_003.jpg"
+  },
+  {
+    "id": "prod_crt_004",
+    "name": "Pure Creatine Monohydrate Powder",
+    "brand": "Nutrabay",
+    "category": "Creatine Monohydrate",
+    "description": "Labdoor certified budget-friendly pure unflavored creatine monohydrate to increase cell hydration and explosive lifting speed.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 3,
+      "servingsPerContainer": 100,
+      "creatineMonohydrateGrams": 3,
+      "calories": 0
+    },
+    "priceInr": 699,
+    "imageUrl": "/storage/v1/object/public/Supplies/Creatines/prod_crt_004.jpg"
+  },
+  {
+    "id": "prod_crt_005",
+    "name": "Creatine Monohydrate Effervescent",
+    "brand": "Fast&Up",
+    "category": "Creatine Effervescent",
+    "description": "Fizzy effervescent creatine tablets engineered for instant dissolution and enhanced muscular absorption without water retention issues.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeTablets": 1,
+      "servingsPerContainer": 20,
+      "creatineMonohydrateGrams": 3,
+      "calories": 8
+    },
+    "priceInr": 449,
+    "imageUrl": "/storage/v1/object/public/Supplies/Creatines/prod_crt_005.jpg"
+  }
+]

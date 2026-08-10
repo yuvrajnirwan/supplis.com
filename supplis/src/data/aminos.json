@@ -1,0 +1,84 @@
+[
+  {
+    "id": "prod_intra_001",
+    "name": "XTEND Original BCAA",
+    "brand": "Scivation XTEND",
+    "category": "BCAA & Electrolytes",
+    "description": "World's #1 intra-workout brand packed with 7g BCAAs in a clinically proven 2:1:1 ratio plus hydrating electrolytes.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 14,
+      "servingsPerContainer": 30,
+      "calories": 0,
+      "bcaaGrams": 7,
+      "lLeucineGrams": 3.5,
+      "lIsoleucineGrams": 1.75,
+      "lValineGrams": 1.75,
+      "lGlutamineGrams": 2.5,
+      "electrolytesMg": 1140
+    },
+    "priceInr": 2399,
+    "imageUrl": "/storage/v1/object/public/Supplies/Aminos/prod_intra_001.jpg"
+  },
+  {
+    "id": "prod_intra_002",
+    "name": "BCAA Pro Essential Amino Acids",
+    "brand": "MuscleBlaze",
+    "category": "BCAA & Electrolytes",
+    "description": "Powerful 7g BCAA intra-workout blend fortified with Glutamine and Sodium-Potassium electrolyte matrix for muscle anti-catabolism.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 15,
+      "servingsPerContainer": 30,
+      "calories": 0,
+      "bcaaGrams": 7,
+      "lLeucineGrams": 3.5,
+      "lIsoleucineGrams": 1.75,
+      "lValineGrams": 1.75,
+      "lGlutamineGrams": 1,
+      "electrolytesMg": 220
+    },
+    "priceInr": 1499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Aminos/prod_intra_002.jpg"
+  },
+  {
+    "id": "prod_intra_003",
+    "name": "Gold EAA Essential Amino Acids",
+    "brand": "Nutrabay",
+    "category": "Full Spectrum EAA",
+    "description": "Complete 9 essential amino acid formula featuring 6g EAAs per scoop for full-spectrum protein synthesis and muscle protection.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 10,
+      "servingsPerContainer": 25,
+      "calories": 0,
+      "eaaGrams": 6,
+      "bcaaGrams": 3.5,
+      "lHistidineMg": 200,
+      "lLysineMg": 600,
+      "lThreonineMg": 400
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Aminos/prod_intra_003.jpg"
+  },
+  {
+    "id": "prod_intra_004",
+    "name": "ATOM Essential Amino Acids (EAA)",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Full Spectrum EAA",
+    "description": "Ultra-pure fast dissolving 9 essential amino acids blend with zero sugar and fast intra-workout gastric emptying.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 10,
+      "servingsPerContainer": 25,
+      "calories": 0,
+      "eaaGrams": 7.2,
+      "bcaaGrams": 4.1,
+      "lHistidineMg": 250,
+      "lLysineMg": 700,
+      "lThreonineMg": 450
+    },
+    "priceInr": 799,
+    "imageUrl": "/storage/v1/object/public/Supplies/Aminos/prod_intra_004.jpg"
+  }
+]

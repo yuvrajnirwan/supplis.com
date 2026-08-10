@@ -1,0 +1,142 @@
+[
+  {
+    "id": "prod_pw_001",
+    "name": "Pre-Workout WrathX",
+    "brand": "MuscleBlaze",
+    "category": "Pre-Workout",
+    "description": "High-intensity explosive pre-workout packed with EnXtra, BioPerine, and clinical doses of Citrulline and Beta-Alanine.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 15,
+      "servingsPerContainer": 30,
+      "calories": 10,
+      "caffeineMg": 200,
+      "lCitrullineMg": 3000,
+      "betaAlanineMg": 1500,
+      "lArginineMg": 750,
+      "tyrosineMg": 500
+    },
+    "priceInr": 1299,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_001.jpg"
+  },
+  {
+    "id": "prod_pw_002",
+    "name": "C4 Original Pre-Workout",
+    "brand": "Cellucor",
+    "category": "Pre-Workout",
+    "description": "America's #1 selling pre-workout powered by explosive energy, N-Acetyl L-Tyrosine, and patented CarnoSyn Beta-Alanine.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 6.5,
+      "servingsPerContainer": 30,
+      "calories": 5,
+      "caffeineMg": 150,
+      "lCitrullineMg": 1000,
+      "betaAlanineMg": 1600,
+      "lArginineMg": 1000,
+      "tyrosineMg": 200
+    },
+    "priceInr": 2199,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_002.jpg"
+  },
+  {
+    "id": "prod_pw_003",
+    "name": "Gold Standard Pre-Workout",
+    "brand": "Optimum Nutrition",
+    "category": "Pre-Workout",
+    "description": "Unleashes energy, focus, and performance with natural source caffeine, L-Citrulline Malate, and PerforMelon watermelon extract.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 11,
+      "servingsPerContainer": 30,
+      "calories": 15,
+      "caffeineMg": 175,
+      "lCitrullineMg": 1500,
+      "betaAlanineMg": 1500,
+      "lArginineMg": 0,
+      "tyrosineMg": 250
+    },
+    "priceInr": 2399,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_003.jpg"
+  },
+  {
+    "id": "prod_pw_004",
+    "name": "ATOM Pre-Workout",
+    "brand": "AS-IT-IS ATOM",
+    "category": "Pre-Workout",
+    "description": "High-octane workout fuel designed for peak vasodilation, intense pump, and zero sugar crashes.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 10,
+      "servingsPerContainer": 25,
+      "calories": 0,
+      "caffeineMg": 200,
+      "lCitrullineMg": 2500,
+      "betaAlanineMg": 1500,
+      "lArginineMg": 1000,
+      "tyrosineMg": 300
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_004.jpg"
+  },
+  {
+    "id": "prod_pw_005",
+    "name": "Psychotic Pre-Workout",
+    "brand": "Insane Labz",
+    "category": "Extreme Pre-Workout",
+    "description": "Hardcore high-stimulant pre-workout formula featuring Ampiberry for prolonged energy, focus, and extreme pumps.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 6.3,
+      "servingsPerContainer": 35,
+      "calories": 0,
+      "caffeineMg": 300,
+      "lCitrullineMg": 1500,
+      "betaAlanineMg": 1600,
+      "lArginineMg": 0,
+      "tyrosineMg": 0
+    },
+    "priceInr": 2499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_005.jpg"
+  },
+  {
+    "id": "prod_pw_006",
+    "name": "Shatter Pre-Workout",
+    "brand": "MuscleTech",
+    "category": "Pre-Workout",
+    "description": "Advanced scientifically engineered pre-workout packed with patented Nitrosigine and BetaPower betaine.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 15,
+      "servingsPerContainer": 30,
+      "calories": 10,
+      "caffeineMg": 225,
+      "lCitrullineMg": 3200,
+      "betaAlanineMg": 1600,
+      "lArginineMg": 0,
+      "tyrosineMg": 200
+    },
+    "priceInr": 2399,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_006.jpg"
+  },
+  {
+    "id": "prod_pw_007",
+    "name": "Nutrabay Gold Spark Pre-Workout",
+    "brand": "Nutrabay",
+    "category": "Pre-Workout",
+    "description": "Budget-friendly clean energy formula providing smooth focus and stamina without jitters or tingling sensation.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeGrams": 10,
+      "servingsPerContainer": 25,
+      "calories": 5,
+      "caffeineMg": 180,
+      "lCitrullineMg": 2000,
+      "betaAlanineMg": 1200,
+      "lArginineMg": 500,
+      "tyrosineMg": 250
+    },
+    "priceInr": 799,
+    "imageUrl": "/storage/v1/object/public/Supplies/Preworkout/prod_pw_007.jpg"
+  }
+]

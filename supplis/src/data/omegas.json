@@ -1,0 +1,97 @@
+[
+  {
+    "id": "prod_omg_001",
+    "name": "Triple Strength Fish Oil 1000mg",
+    "brand": "MuscleBlaze",
+    "category": "Omega-3",
+    "description": "High-potency triple strength fish oil delivering 540mg EPA and 360mg DHA per softgel with an enteric coating to prevent fishy burps.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalFishOilMg": 1250,
+      "totalOmega3Mg": 900,
+      "epaMg": 540,
+      "dhaMg": 360,
+      "entericCoated": true
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Omegas/prod_omg_001.webp"
+  },
+  {
+    "id": "prod_omg_002",
+    "name": "Triple Strength Omega 3 Fish Oil",
+    "brand": "Truebasics",
+    "category": "Omega-3",
+    "description": "Molecularly distilled, ultra-pure fish oil extracted from cold water fishes. Provides 525mg EPA and 375mg DHA per capsule.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalFishOilMg": 1250,
+      "totalOmega3Mg": 900,
+      "epaMg": 525,
+      "dhaMg": 375,
+      "entericCoated": true
+    },
+    "priceInr": 999,
+    "imageUrl": "/storage/v1/object/public/Supplies/Omegas/prod_omg_002.jpg"
+  },
+  {
+    "id": "prod_omg_003",
+    "name": "Fish Oil 1000mg Softgels",
+    "brand": "Optimum Nutrition",
+    "category": "Omega-3",
+    "description": "Enteric-coated softgels containing essential fatty acids to support joint mobility, cardiovascular health, and brain function.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 100,
+      "totalFishOilMg": 1000,
+      "totalOmega3Mg": 300,
+      "epaMg": 180,
+      "dhaMg": 120,
+      "entericCoated": true
+    },
+    "priceInr": 1499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Omegas/prod_omg_003.jpg"
+  },
+  {
+    "id": "prod_omg_004",
+    "name": "Plant-Based Vegan Omega 3",
+    "brand": "OZiva",
+    "category": "Vegan Omega-3",
+    "description": "100% Vegan Omega-3 derived from natural Algal Oil providing direct EPA and DHA without fish ocean contaminants or mercury.",
+    "isVegetarian": true,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalAlgalOilMg": 1000,
+      "totalOmega3Mg": 400,
+      "epaMg": 100,
+      "dhaMg": 300,
+      "entericCoated": false
+    },
+    "priceInr": 899,
+    "imageUrl": "/storage/v1/object/public/Supplies/Omegas/prod_omg_004.jpg"
+  },
+  {
+    "id": "prod_omg_005",
+    "name": "Pure Omega 3 Fish Oil 1000mg",
+    "brand": "Nutrabay",
+    "category": "Omega-3",
+    "description": "Heavy-metal tested purified omega-3 capsules for everyday cardiovascular wellness and muscle soreness reduction.",
+    "isVegetarian": false,
+    "nutritionFacts": {
+      "servingSizeCapsules": 1,
+      "servingsPerContainer": 60,
+      "totalFishOilMg": 1000,
+      "totalOmega3Mg": 330,
+      "epaMg": 180,
+      "dhaMg": 120,
+      "entericCoated": false
+    },
+    "priceInr": 499,
+    "imageUrl": "/storage/v1/object/public/Supplies/Omegas/prod_omg_005.jpg"
+  }
+]
