@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../css/navbar.css";
-import { useCart } from "../context/CartContext";
 
 function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const navigate = useNavigate();
-    const { items } = useCart();
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen((prev) => !prev);
@@ -16,7 +14,7 @@ function Navbar() {
     const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === "Enter" && searchQuery.trim()) {
             navigate(`/ProductListing?search=${encodeURIComponent(searchQuery.trim())}`);
-            setIsMobileMenuOpen(false); // Close mobile menu if open
+            setIsMobileMenuOpen(false);
         }
     };
     return (
@@ -69,13 +67,6 @@ function Navbar() {
                             Account
                         </NavLink>
                     </li>
-
-
-                    <li className="cart-mobile">
-                        <NavLink to="/cart" className="cart-icon" onClick={() => setIsMobileMenuOpen(false)}>
-                            🛒 Cart { /* mobile */ }
-                        </NavLink>
-                    </li>
                 </ul>
 
                 {/* Search Bar */}
@@ -87,14 +78,6 @@ function Navbar() {
                         onChange={(e) => setSearchQuery(e.target.value)}
                         onKeyDown={handleSearchKeyDown}
                     />
-                </div>
-
-                {/* Desktop Cart */}
-                <div className="cart-desktop">
-                    <NavLink to="/cart" className="cart-icon">
-                        🛒 Cart
-                        {items && items.length > 0 ? <span className="ml-2 text-sm font-bold">({items.length})</span> : null}
-                    </NavLink>
                 </div>
             </div>
         </nav>

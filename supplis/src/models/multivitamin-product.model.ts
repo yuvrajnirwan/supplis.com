@@ -40,6 +40,18 @@ export class MultivitaminProduct extends Entity {
   isVegetarian?: boolean;
 
   @property({
+    type: 'number',
+    required: true,
+  })
+  priceInr: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  imageUrl: string;
+
+  @property({
     type: 'object',
   })
   nutritionFacts?: {
@@ -58,25 +70,6 @@ export class MultivitaminProduct extends Entity {
     wholefoodBlend_mg?: number;
   };
 
-  @property({
-    type: 'array',
-    itemType: 'object',
-  })
-  variants?: {
-    id: string;
-    sku: string;
-    flavor: string;
-    count: number;
-    priceInr: number;
-    mrpInr: number;
-    stockQuantity: number;
-    images: {
-      url: string;
-      isPrimary: boolean;
-      altText: string;
-    }[];
-  }[];
-
   constructor(data?: Partial<MultivitaminProduct>) {
     super(data);
   }
@@ -84,4 +77,5 @@ export class MultivitaminProduct extends Entity {
 
 export interface MultivitaminProductRelations {}
 
-export type MultivitaminProductWithRelations = MultivitaminProduct & MultivitaminProductRelations;
+export type MultivitaminProductWithRelations =
+  MultivitaminProduct & MultivitaminProductRelations;

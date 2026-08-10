@@ -1,4 +1,4 @@
-import "../css/Footer.css"; // Import your CSS file for styling
+import "../css/Footer.css";
 import { useNavigate } from "react-router-dom";
 function Footer() {
     const navigate = useNavigate();
@@ -6,7 +6,7 @@ function Footer() {
         navigate("/about"); // Navigates to the About page
     };
     const goToHome = () => {
-        navigate("/productListing");
+        navigate("/");
     };
     const goToFeatures = () => {
         navigate("/features");

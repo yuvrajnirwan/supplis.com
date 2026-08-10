@@ -40,6 +40,18 @@ export class OmegaProduct extends Entity {
   isVegetarian?: boolean;
 
   @property({
+    type: 'number',
+    required: true,
+  })
+  priceInr: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  imageUrl: string;
+
+  @property({
     type: 'object',
   })
   nutritionFacts?: {
@@ -52,25 +64,6 @@ export class OmegaProduct extends Entity {
     dhaMg?: number;
     entericCoated?: boolean;
   };
-
-  @property({
-    type: 'array',
-    itemType: 'object',
-  })
-  variants?: {
-    id: string;
-    sku: string;
-    flavor: string;
-    count: number;
-    priceInr: number;
-    mrpInr: number;
-    stockQuantity: number;
-    images: {
-      url: string;
-      isPrimary: boolean;
-      altText: string;
-    }[];
-  }[];
 
   constructor(data?: Partial<OmegaProduct>) {
     super(data);

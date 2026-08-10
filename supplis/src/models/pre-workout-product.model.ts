@@ -40,6 +40,18 @@ export class PreWorkoutProduct extends Entity {
   isVegetarian?: boolean;
 
   @property({
+    type: 'number',
+    required: true,
+  })
+  priceInr: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  imageUrl: string;
+
+  @property({
     type: 'object',
   })
   nutritionFacts?: {
@@ -53,25 +65,6 @@ export class PreWorkoutProduct extends Entity {
     tyrosineMg?: number;
   };
 
-  @property({
-    type: 'array',
-    itemType: 'object',
-  })
-  variants?: {
-    id: string;
-    sku: string;
-    flavor: string;
-    weightGrams: number;
-    priceInr: number;
-    mrpInr: number;
-    stockQuantity: number;
-    images: {
-      url: string;
-      isPrimary: boolean;
-      altText: string;
-    }[];
-  }[];
-
   constructor(data?: Partial<PreWorkoutProduct>) {
     super(data);
   }
@@ -79,4 +72,5 @@ export class PreWorkoutProduct extends Entity {
 
 export interface PreWorkoutProductRelations {}
 
-export type PreWorkoutProductWithRelations = PreWorkoutProduct & PreWorkoutProductRelations;
+export type PreWorkoutProductWithRelations =
+  PreWorkoutProduct & PreWorkoutProductRelations;

@@ -40,6 +40,18 @@ export class SaltProduct extends Entity {
   isVegetarian?: boolean;
 
   @property({
+    type: 'number',
+    required: true,
+  })
+  priceInr: number;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
+  imageUrl: string;
+
+  @property({
     type: 'object',
   })
   nutritionFacts?: {
@@ -54,25 +66,6 @@ export class SaltProduct extends Entity {
     vitaminCmg?: number;
     carbsGrams?: number;
   };
-
-  @property({
-    type: 'array',
-    itemType: 'object',
-  })
-  variants?: {
-    id: string;
-    sku: string;
-    flavor: string;
-    weightGrams: number;
-    priceInr: number;
-    mrpInr: number;
-    stockQuantity: number;
-    images: {
-      url: string;
-      isPrimary: boolean;
-      altText: string;
-    }[];
-  }[];
 
   constructor(data?: Partial<SaltProduct>) {
     super(data);
