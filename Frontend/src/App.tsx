@@ -9,17 +9,20 @@ import { CategoriesIndex } from "./components/CategoriesIndex";
 import { CategoryPage } from "./components/CategoriesPage";
 import ProductDetail from "./components/ProductDetail";
 import { getAllProducts } from "./services/productService";
-import AboutUs from "./components/AboutUs.tsx";
-import ContactUs from "./components/ContactUs.tsx";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
+import {Features} from "./components/Features";
+import {FAQs} from "./components/FAQs";
 
 
 
 function ProductDetailWrapper() {
     const { id } = useParams<{ id: string }>();
-    const [product, setProduct] = React.useState<any>(null);
+    const [product, setProduct] = React.useState<unknown>(null);
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setLoading(true);
         getAllProducts().then(all => {
             const found = all.find((p) => p.id === id);
@@ -75,6 +78,13 @@ export default function App() {
 
                         {/* Contact Us Route */}
                         <Route path="/contact" element={<ContactUs />} />
+
+
+                        {/* Contact Us Route */}
+                        <Route path="/features" element={<Features />} />
+
+                        {/* FAQs Route */}
+                        <Route path="/faqs" element={<FAQs />} />
                     </Routes>
                 </main>
 
