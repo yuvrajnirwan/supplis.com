@@ -9,9 +9,11 @@ import { CategoriesIndex } from "./components/CategoriesIndex";
 import { CategoryPage } from "./components/CategoriesPage";
 import ProductDetail from "./components/ProductDetail";
 import { getAllProducts } from "./services/productService";
+import AboutUs from "./components/AboutUs.tsx";
+import ContactUs from "./components/ContactUs.tsx";
 
 
-// Wrapper component to match the URL `:id` to a product from dataset
+
 function ProductDetailWrapper() {
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = React.useState<any>(null);
@@ -67,6 +69,12 @@ export default function App() {
 
                         {/* Product Detail Route */}
                         <Route path="/product/:id" element={<ProductDetailWrapper />} />
+
+                        {/* About Us Route */}
+                        <Route path="/about" element={<AboutUs />} />
+
+                        {/* Contact Us Route */}
+                        <Route path="/contact" element={<ContactUs />} />
                     </Routes>
                 </main>
 
