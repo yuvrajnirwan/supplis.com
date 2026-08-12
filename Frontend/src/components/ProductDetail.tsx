@@ -14,12 +14,12 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onAddToCa
     return (
         <div className="container py-5">
             <div className="row">
-                <div className="col-md-6 text-center">
+                <div className="col-md-6 d-flex align-items-center justify-content-center">
                     <img
                         src={primaryImage}
                         alt={product.name}
                         className="img-fluid rounded shadow"
-                        style={{ maxHeight: '500px' }}
+                        style={{ maxHeight: '500px', objectFit: 'contain', marginTop: '-250px' }}
                     />
                 </div>
                 <div className="col-md-6">
