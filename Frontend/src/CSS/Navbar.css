@@ -35,7 +35,7 @@ body, html {
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    gap: 40px; /* Reduced from 100px for better fit */
+    gap: 40px;
     margin: 0;
     padding: 0;
 }
@@ -137,16 +137,6 @@ body, html {
     margin-left: 6px;
 }
 
-.cart-desktop {
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-}
-
-.cart-mobile {
-    display: none;
-}
-
 /* --- Search Bar --- */
 .search-bar {
     display: flex;
@@ -174,6 +164,43 @@ body, html {
     border-color: #ff9900;
 }
 
+/* --- Floating Mobile Cart Base Styles (Hidden on Desktop) --- */
+.mobile-floating-cart {
+    display: none;
+}
+
+.floating-cart-btn {
+    background-color: #ff9900;
+    color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.floating-cart-btn:active {
+    transform: scale(0.95);
+}
+
+.floating-cart-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 7px;
+    border: 2px solid black;
+}
+
 /* --- Responsive Media Queries --- */
 @media screen and (max-width: 1024px) {
     .nav-links {
@@ -182,6 +209,7 @@ body, html {
 }
 
 @media screen and (max-width: 768px) {
+    /* Hamburger & Menu */
     .hamburger {
         display: flex;
     }
@@ -218,21 +246,21 @@ body, html {
         border-radius: 0;
     }
 
+    /* Hide elements not needed on mobile */
     .search-bar {
         display: none;
     }
 
-    .cart-desktop {
-        display: none;
-    }
-
-    .cart-mobile {
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-    }
-
     .about {
         display: none;
+    }
+
+    /* Show and position the floating mobile cart */
+    .mobile-floating-cart {
+        display: block;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 1050;
     }
 }

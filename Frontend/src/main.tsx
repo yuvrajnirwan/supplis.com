@@ -4,8 +4,14 @@ import './index.css'
 import App from './App.tsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+import { CartProvider } from './context/CartContext';
+
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+    <StrictMode>
+        {/* 2. Wrap your App in the Provider */}
+        <CartProvider>
+            <App />
+        </CartProvider>
+    </StrictMode>,
 )
