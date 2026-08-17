@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as bootstrap from 'bootstrap';
+import { useCart } from '../context/CartContext'; // 1. Import Cart Context
 
 const SUPABASE_BASE_URL =
     import.meta.env.VITE_SUPABASE_URL || 'https://hboaizlxmcqlsefqqygi.supabase.co';
@@ -21,40 +22,43 @@ const COUPONS = [
     { minSpend: '₹5,000', discount: '20% OFF', code: 'SUPPLIS5000', badgeClass: 'bg-danger' },
 ];
 
-// Featured Products
+// Featured Products with normalized data structure
 const FEATURED_PRODUCTS = [
     {
-        id: 1,
+        id: 'prod_creat_001',
         name: 'MB Micronized Creatine Monohydrate',
-        price: '₹1,299',
+        priceInr: 1299,
         category: 'Creatine',
-        image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/creatine.jpg`
+        imageUrl: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/creatine.jpg`
     },
     {
-        id: 2,
+        id: 'prod_pre_002',
         name: 'WrathX Pre-Workout Intense Formula',
-        price: '₹1,500',
+        priceInr: 1500,
         category: 'Pre-Workout',
-        image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/pre.jpg`
+        imageUrl: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/pre.jpg`
     },
     {
-        id: 3,
+        id: 'prod_prot_003',
         name: '100% Whey Protein Isolate 2kg',
-        price: '₹5,000',
+        priceInr: 5000,
         category: 'Proteins',
-        image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/protein.jpg`
+        imageUrl: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/protein.jpg`
     },
     {
-        id: 4,
+        id: 'prod_vita_004',
         name: 'Daily Multivitamin & Mineral Complex',
-        price: '₹700',
+        priceInr: 700,
         category: 'Vitamins',
-        image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/multivita.jpg`
+        imageUrl: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/HomePage/multivita.jpg`
     },
 ];
 
 export const HomePage: React.FC = () => {
     const [copiedCode, setCopiedCode] = useState<string | null>(null);
+
+    // 2. Consume addToCart from CartContext
+    const { addToCart } = useCart();
 
     useEffect(() => {
         const element = document.getElementById('carouselExampleAutoplaying');
@@ -75,6 +79,20 @@ export const HomePage: React.FC = () => {
         navigator.clipboard.writeText(code);
         setCopiedCode(code);
         setTimeout(() => setCopiedCode(null), 2000);
+    };
+
+    // 3. Handler to add product to cart
+    const handleAddToCart = (product: typeof FEATURED_PRODUCTS[0]) => {
+        addToCart(
+            {
+                id: product.id,
+                name: product.name,
+                priceInr: product.priceInr,
+                imageUrl: product.imageUrl,
+            },
+            1
+        );
+        alert(`${product.name} added to cart!`);
     };
 
     return (
@@ -180,7 +198,7 @@ export const HomePage: React.FC = () => {
             <section className="container my-5 pb-5">
                 <div className="d-flex justify-content-between align-items-center mb-4">
                     <h3 className="fw-bold m-0">Trending Products</h3>
-                    <a href="#view-all" className="text-warning text-decoration-none fw-bold">
+                    <a href="/categories" className="text-warning text-decoration-none fw-bold">
                         View All →
                     </a>
                 </div>
@@ -194,7 +212,7 @@ export const HomePage: React.FC = () => {
                                     style={{ height: '220px' }}
                                 >
                                     <img
-                                        src={product.image}
+                                        src={product.imageUrl}
                                         alt={product.name}
                                         className="img-fluid"
                                         style={{ maxHeight: '100%', objectFit: 'contain' }}
@@ -215,8 +233,11 @@ export const HomePage: React.FC = () => {
                                     </div>
 
                                     <div className="mt-3 d-flex align-items-center justify-content-between">
-                                        <span className="fw-bold fs-5 text-dark">{product.price}</span>
-                                        <button className="btn btn-warning btn-sm fw-bold">
+                                        <span className="fw-bold fs-5 text-dark">₹{product.priceInr.toLocaleString('en-IN')}</span>
+                                        <button
+                                            onClick={() => handleAddToCart(product)}
+                                            className="btn btn-warning btn-sm fw-bold"
+                                        >
                                             Add to Cart
                                         </button>
                                     </div>
