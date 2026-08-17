@@ -1,46 +1,81 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 
 interface ProductDetailProps {
     product: any;
-    onAddToCart: (variant: any, quantity: number) => void;
+    onAddToCart: (productToAdd: any, quantity: number) => void;
 }
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onAddToCart }) => {
-    if (!product) return <div>Product not found</div>;
+    // NEW: Added state to manage quantity
+    const [quantity, setQuantity] = useState(1);
+
+    if (!product) return <div className="text-center py-5">Product not found</div>;
 
     const primaryVariant = product.variants?.[0] || {};
-    const primaryImage = primaryVariant.images?.[0]?.url ;
+    const primaryImage = primaryVariant.images?.[0]?.url;
+
+    // NEW: Prepare the exact data structure your CartContext expects
+    const handleAddToCart = () => {
+        const cartItemData = {
+            id: product.id,
+            name: product.name,
+            priceInr: primaryVariant.priceInr,
+            imageUrl: primaryImage,
+        };
+        onAddToCart(cartItemData, quantity);
+    };
+
+    const increaseQuantity = () => setQuantity(prev => prev + 1);
+    const decreaseQuantity = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
+
     return (
         <div className="container py-5">
             <div className="row">
                 <div className="col-md-6 text-center">
                     <img
-                        src={primaryImage}
+                        src={primaryImage || 'https://via.placeholder.com/500'}
                         alt={product.name}
                         className="img-fluid rounded shadow"
-                        style={{ maxHeight: '500px' }}
+                        style={{ maxHeight: '500px', objectFit: 'contain' }}
                     />
                 </div>
                 <div className="col-md-6">
                     <h1 className="fw-bold mb-3">{product.name}</h1>
                     <div className="mb-4">
-                        <span className="fs-2 fw-bold text-dark">₹{primaryVariant.priceInr }</span>
+                        <span className="fs-2 fw-bold text-dark">₹{primaryVariant.priceInr}</span>
                         {primaryVariant.mrpInr > primaryVariant.priceInr && (
                             <span className="text-muted text-decoration-line-through ms-3 fs-5">₹{primaryVariant.mrpInr}</span>
                         )}
                     </div>
                     <p className="text-muted mb-4">{product.description || 'Premium quality supplement for your health and fitness goals.'}</p>
-                    
-                    <div className="d-grid gap-2">
-                        <button 
-                            className="btn btn-warning btn-lg fw-bold"
-                            onClick={() => onAddToCart(primaryVariant, 1)}
+
+                    {/* NEW: Quantity Selector & Add to Cart Button */}
+                    <div className="d-flex align-items-center gap-3 mb-4">
+                        <div className="d-flex align-items-center border rounded">
+                            <button
+                                className="btn btn-light border-0 px-3 py-2 fw-bold"
+                                onClick={decreaseQuantity}
+                            >
+                                -
+                            </button>
+                            <span className="px-4 fw-bold">{quantity}</span>
+                            <button
+                                className="btn btn-light border-0 px-3 py-2 fw-bold"
+                                onClick={increaseQuantity}
+                            >
+                                +
+                            </button>
+                        </div>
+
+                        <button
+                            className="btn btn-warning btn-lg fw-bold flex-grow-1"
+                            style={{ backgroundColor: '#ff9900', border: 'none' }}
+                            onClick={handleAddToCart}
                         >
                             Add to Cart
                         </button>
                     </div>
-                    
+
                     {product.nutritionFacts && (
                         <div className="mt-5 p-4 border rounded bg-white shadow-sm">
                             <h5 className="fw-bold mb-3 border-bottom pb-2">Nutrition Facts</h5>
@@ -62,7 +97,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product, onAddToCa
                         <ul className="text-muted">
                             <li>100% Authentic & Lab Tested</li>
                             <li>Premium Ingredients</li>
-                            <li>Fast Delivery</li>
+                            <li>Fast Delivery across India</li>
                         </ul>
                     </div>
                 </div>
