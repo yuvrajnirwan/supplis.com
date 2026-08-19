@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Category} from './category.model';
 
-@model({ settings: { strict: false } })
+@model({settings: {strict: true}})
 export class ProteinProduct extends Entity {
   @property({
     type: 'string',
@@ -24,9 +25,9 @@ export class ProteinProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
-  category: string;
+  category?: string;
 
   @property({
     type: 'string',
@@ -38,18 +39,6 @@ export class ProteinProduct extends Entity {
     default: true,
   })
   isVegetarian?: boolean;
-
-  @property({
-    type: 'number',
-    required: true,
-  })
-  priceInr: number;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  imageUrl: string;
 
   @property({
     type: 'object',
@@ -64,6 +53,28 @@ export class ProteinProduct extends Entity {
     eaaGrams?: number;
   };
 
+  @property({
+    type: 'array',
+    itemType: 'object',
+  })
+  variants?: {
+    id: string;
+    sku: string;
+    flavor: string;
+    weightGrams: number;
+    priceInr: number;
+    mrpInr: number;
+    stockQuantity: number;
+    images: {
+      url: string;
+      isPrimary: boolean;
+      altText: string;
+    }[];
+  }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
+
   constructor(data?: Partial<ProteinProduct>) {
     super(data);
   }
@@ -71,5 +82,4 @@ export class ProteinProduct extends Entity {
 
 export interface ProteinProductRelations {}
 
-export type ProteinProductWithRelations =
-  ProteinProduct & ProteinProductRelations;
+export type ProteinProductWithRelations = ProteinProduct & ProteinProductRelations;

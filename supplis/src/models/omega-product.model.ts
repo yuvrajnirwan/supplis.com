@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Category} from './category.model';
 
-@model({ settings: { strict: false } })
+@model({settings: {strict: false}})
 export class OmegaProduct extends Entity {
   @property({
     type: 'string',
@@ -24,7 +25,7 @@ export class OmegaProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   category: string;
 
@@ -40,18 +41,6 @@ export class OmegaProduct extends Entity {
   isVegetarian?: boolean;
 
   @property({
-    type: 'number',
-    required: true,
-  })
-  priceInr: number;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  imageUrl: string;
-
-  @property({
     type: 'object',
   })
   nutritionFacts?: {
@@ -64,6 +53,28 @@ export class OmegaProduct extends Entity {
     dhaMg?: number;
     entericCoated?: boolean;
   };
+
+  @property({
+    type: 'array',
+    itemType: 'object',
+  })
+  variants?: {
+    id: string;
+    sku: string;
+    flavor: string;
+    count: number;
+    priceInr: number;
+    mrpInr: number;
+    stockQuantity: number;
+    images: {
+      url: string;
+      isPrimary: boolean;
+      altText: string;
+    }[];
+  }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
 
   constructor(data?: Partial<OmegaProduct>) {
     super(data);

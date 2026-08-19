@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Category} from './category.model';
 
-@model({ settings: { strict: false } })
+@model({settings: {strict: false}})
 export class SingleVitaminProduct extends Entity {
   @property({
     type: 'string',
@@ -24,7 +25,7 @@ export class SingleVitaminProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   category: string;
 
@@ -38,18 +39,6 @@ export class SingleVitaminProduct extends Entity {
     default: true,
   })
   isVegetarian?: boolean;
-
-  @property({
-    type: 'number',
-    required: true,
-  })
-  priceInr: number;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  imageUrl: string;
 
   @property({
     type: 'object',
@@ -70,6 +59,28 @@ export class SingleVitaminProduct extends Entity {
     vitaminK2_MK7_mcg?: number;
   };
 
+  @property({
+    type: 'array',
+    itemType: 'object',
+  })
+  variants?: {
+    id: string;
+    sku: string;
+    flavor: string;
+    count: number;
+    priceInr: number;
+    mrpInr: number;
+    stockQuantity: number;
+    images: {
+      url: string;
+      isPrimary: boolean;
+      altText: string;
+    }[];
+  }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
+
   constructor(data?: Partial<SingleVitaminProduct>) {
     super(data);
   }
@@ -77,5 +88,4 @@ export class SingleVitaminProduct extends Entity {
 
 export interface SingleVitaminProductRelations {}
 
-export type SingleVitaminProductWithRelations =
-  SingleVitaminProduct & SingleVitaminProductRelations;
+export type SingleVitaminProductWithRelations = SingleVitaminProduct & SingleVitaminProductRelations;

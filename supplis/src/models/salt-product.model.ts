@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Category} from './category.model';
 
-@model({ settings: { strict: false } })
+@model({settings: {strict: false}})
 export class SaltProduct extends Entity {
   @property({
     type: 'string',
@@ -24,7 +25,7 @@ export class SaltProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   category: string;
 
@@ -38,18 +39,6 @@ export class SaltProduct extends Entity {
     default: true,
   })
   isVegetarian?: boolean;
-
-  @property({
-    type: 'number',
-    required: true,
-  })
-  priceInr: number;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  imageUrl: string;
 
   @property({
     type: 'object',
@@ -66,6 +55,28 @@ export class SaltProduct extends Entity {
     vitaminCmg?: number;
     carbsGrams?: number;
   };
+
+  @property({
+    type: 'array',
+    itemType: 'object',
+  })
+  variants?: {
+    id: string;
+    sku: string;
+    flavor: string;
+    weightGrams: number;
+    priceInr: number;
+    mrpInr: number;
+    stockQuantity: number;
+    images: {
+      url: string;
+      isPrimary: boolean;
+      altText: string;
+    }[];
+  }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
 
   constructor(data?: Partial<SaltProduct>) {
     super(data);
