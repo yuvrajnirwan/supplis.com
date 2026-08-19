@@ -1,7 +1,5 @@
 import { SupplisBackendApplication } from './application';
 
-
-// Navigate out of 'supplis' backend into the relative 'frontend' directory
 import aminos from './data/aminos.json';
 import creatines from './data/creatines.json';
 import multivitamins from './data/multivitamins.json';
@@ -13,6 +11,7 @@ import vitamins from './data/vitamins.json';
 import weightManagement from './data/weightManagement.json';
 
 import {
+  CategoryRepository,
   AminoProductRepository,
   CreatineProductRepository,
   MultivitaminProductRepository,
@@ -28,6 +27,7 @@ export async function seedData() {
   const app = new SupplisBackendApplication();
   await app.boot();
 
+  const categoryRepo = await app.getRepository(CategoryRepository);
   const proteinRepo = await app.getRepository(ProteinProductRepository);
   const multivitaminRepo = await app.getRepository(MultivitaminProductRepository);
   const omegaRepo = await app.getRepository(OmegaProductRepository);
@@ -38,37 +38,62 @@ export async function seedData() {
   const aminoRepo = await app.getRepository(AminoProductRepository);
   const creatineRepo = await app.getRepository(CreatineProductRepository);
 
-  console.log('Seeding products from frontend folder into database...');
+  console.log('Clearing existing records from database...');
+  await proteinRepo.deleteAll();
+  await multivitaminRepo.deleteAll();
+  await omegaRepo.deleteAll();
+  await preworkoutRepo.deleteAll();
+  await saltRepo.deleteAll();
+  await singleVitaminRepo.deleteAll();
+  await weightManageRepo.deleteAll();
+  await aminoRepo.deleteAll();
+  await creatineRepo.deleteAll();
+  await categoryRepo.deleteAll();
 
-  async function seedCategory(repo: any, data: any[], categoryName: string) {
+  console.log('Seeding products with cat_ Category IDs...');
+
+  async function seedCategory(
+    repo: any,
+    data: any[],
+    categoryName: string,
+    customCategoryId: string
+  ) {
+    if (!data || data.length === 0) return;
+
+    // 1. Create Category with clean ID (e.g., 'cat_prot', 'cat_amino')
+    const category = await categoryRepo.create({
+      id: customCategoryId,
+      name: categoryName,
+    });
+
+    // 2. Map through products and set categoryId foreign key
     for (const item of data) {
       try {
-        const exists = await repo.exists(item.id);
-        if (!exists) {
-          await repo.create(item);
-        }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { category: oldCategoryString, ...cleanedItem } = item;
+
+        await repo.create({
+          ...cleanedItem,
+          categoryId: category.id, // Foreign key linking to cat_ ID
+        });
       } catch (err) {
         console.error(`Failed to insert ${item.id} in ${categoryName}:`, err);
       }
     }
-    console.log(`✔ ${categoryName} seeded (${data.length} items)`);
+    console.log(`✔ ${categoryName} seeded (${data.length} items) [ID: ${customCategoryId}]`);
   }
 
-  await seedCategory(proteinRepo, proteins, 'Proteins');
-  await seedCategory(multivitaminRepo, multivitamins, 'Multivitamins');
-  await seedCategory(omegaRepo, omegas, 'Omegas');
-  await seedCategory(preworkoutRepo, preworkouts, 'Pre-Workouts');
-  await seedCategory(saltRepo, salts, 'Salts');
-  await seedCategory(singleVitaminRepo, vitamins, 'Vitamins');
-  await seedCategory(weightManageRepo, weightManagement, 'Weight Management');
-  await seedCategory(aminoRepo, aminos, 'Aminos');
-  await seedCategory(creatineRepo, creatines, 'Creatines');
+  // 3. Execute Seeding with cat_ Category IDs
+  await seedCategory(proteinRepo, proteins, 'Proteins', 'cat_prot');
+  await seedCategory(multivitaminRepo, multivitamins, 'Multivitamins', 'cat_multi');
+  await seedCategory(omegaRepo, omegas, 'Omegas', 'cat_omg');
+  await seedCategory(preworkoutRepo, preworkouts, 'Pre-Workouts', 'cat_pw');
+  await seedCategory(saltRepo, salts, 'Salts', 'cat_salt');
+  await seedCategory(singleVitaminRepo, vitamins, 'Vitamins', 'cat_vit');
+  await seedCategory(weightManageRepo, weightManagement, 'Weight Management', 'cat_wm');
+  await seedCategory(aminoRepo, aminos, 'Aminos', 'cat_amino');
+  await seedCategory(creatineRepo, creatines, 'Creatines', 'cat_crt');
 
-  console.log('All data successfully seeded!');
+  console.log('All categories and products successfully linked with cat_ IDs!');
   process.exit(0);
 }
-
-seedData().catch((err) => {
-  console.error('Data seeding failed:', err);
-  process.exit(1);
-});

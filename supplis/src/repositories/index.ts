@@ -1,4 +1,4 @@
-export * from './product.repository';
+export * from './category.repository';
 export * from './amino-product.repository';
 export * from './creatine-product.repository';
 export * from './multivitamin-product.repository';

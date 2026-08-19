@@ -1,4 +1,4 @@
-export * from './product.model';
+
 export * from './amino-product.model';
 export * from './creatine-product.model';
 export * from './multivitamin-product.model';
@@ -8,3 +8,4 @@ export * from './protein-product.model';
 export * from './salt-product.model';
 export * from './single-vitamin-product.model';
 export * from './weight-management-product.model';
+export * from './category.model';

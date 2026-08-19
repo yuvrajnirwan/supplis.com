@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Category} from './category.model';
 
-@model({ settings: { strict: false } })
+@model({settings: {strict: false}})
 export class SingleVitaminProduct extends Entity {
   @property({
     type: 'string',
@@ -24,7 +25,7 @@ export class SingleVitaminProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   category: string;
 
@@ -76,6 +77,9 @@ export class SingleVitaminProduct extends Entity {
       altText: string;
     }[];
   }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
 
   constructor(data?: Partial<SingleVitaminProduct>) {
     super(data);

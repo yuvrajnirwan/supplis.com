@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Category} from './category.model';
 
-@model({ settings: { strict: false } })
+@model({settings: {strict: false}})
 export class SaltProduct extends Entity {
   @property({
     type: 'string',
@@ -24,7 +25,7 @@ export class SaltProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
   category: string;
 
@@ -73,6 +74,9 @@ export class SaltProduct extends Entity {
       altText: string;
     }[];
   }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
 
   constructor(data?: Partial<SaltProduct>) {
     super(data);
