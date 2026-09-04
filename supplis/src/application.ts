@@ -44,11 +44,22 @@ export class SupplisBackendApplication extends BootMixin(
     this.component(AuthenticationServiceComponent);
     this.component(AuthorizationComponent);
 
-    // Allow authentication endpoints and explorer without authorization checks
+    // Allow authentication endpoints, explorer, and public catalog endpoints without authorization checks
     this.bind(AuthorizationBindings.PATHS_TO_ALLOW_ALWAYS).to([
       '/auth',
       '/explorer',
       '/openapi.json',
+      '/ping',
+      '/categories',
+      '/protein-products',
+      '/creatine-products',
+      '/pre-workout-products',
+      '/amino-products',
+      '/salt-products',
+      '/multivitamin-products',
+      '/omega-products',
+      '/single-vitamin-products',
+      '/weight-management-products',
     ]);
 
 

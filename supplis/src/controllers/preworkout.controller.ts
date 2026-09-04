@@ -50,6 +50,7 @@ export class PreworkoutController {
     return this.preWorkoutProductRepository.create(preWorkoutProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/pre-workout-products/count')
   @response(200, {
     description: 'PreWorkoutProduct model count',
@@ -61,6 +62,7 @@ export class PreworkoutController {
     return this.preWorkoutProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/pre-workout-products')
   @response(200, {
     description: 'Array of PreWorkoutProduct model instances',
@@ -99,6 +101,7 @@ export class PreworkoutController {
     return this.preWorkoutProductRepository.updateAll(preWorkoutProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/pre-workout-products/{id}')
   @response(200, {
     description: 'PreWorkoutProduct model instance',

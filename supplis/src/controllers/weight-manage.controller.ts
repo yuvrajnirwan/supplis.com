@@ -50,6 +50,7 @@ export class WeightManageController {
     return this.weightManagementProductRepository.create(weightManagementProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/weight-management-products/count')
   @response(200, {
     description: 'WeightManagementProduct model count',
@@ -61,6 +62,7 @@ export class WeightManageController {
     return this.weightManagementProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/weight-management-products')
   @response(200, {
     description: 'Array of WeightManagementProduct model instances',
@@ -99,6 +101,7 @@ export class WeightManageController {
     return this.weightManagementProductRepository.updateAll(weightManagementProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/weight-management-products/{id}')
   @response(200, {
     description: 'WeightManagementProduct model instance',

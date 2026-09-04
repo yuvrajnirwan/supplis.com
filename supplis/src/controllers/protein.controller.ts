@@ -50,6 +50,7 @@ export class ProteinController {
     return this.proteinProductRepository.create(proteinProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/protein-products/count')
   @response(200, {
     description: 'ProteinProduct model count',
@@ -61,6 +62,7 @@ export class ProteinController {
     return this.proteinProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/protein-products')
   @response(200, {
     description: 'Array of ProteinProduct model instances',
@@ -99,6 +101,7 @@ export class ProteinController {
     return this.proteinProductRepository.updateAll(proteinProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/protein-products/{id}')
   @response(200, {
     description: 'ProteinProduct model instance',

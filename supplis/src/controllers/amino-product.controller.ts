@@ -50,6 +50,7 @@ export class AminoProductController {
     return this.aminoProductRepository.create(aminoProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/amino-products/count')
   @response(200, {
     description: 'AminoProduct model count',
@@ -61,6 +62,7 @@ export class AminoProductController {
     return this.aminoProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/amino-products')
   @response(200, {
     description: 'Array of AminoProduct model instances',
@@ -100,6 +102,7 @@ export class AminoProductController {
     return this.aminoProductRepository.updateAll(aminoProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/amino-products/{id}')
   @response(200, {
     description: 'AminoProduct model instance',

@@ -50,6 +50,7 @@ export class OmegaController {
     return this.omegaProductRepository.create(omegaProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/omega-products/count')
   @response(200, {
     description: 'OmegaProduct model count',
@@ -61,6 +62,7 @@ export class OmegaController {
     return this.omegaProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/omega-products')
   @response(200, {
     description: 'Array of OmegaProduct model instances',
@@ -99,6 +101,7 @@ export class OmegaController {
     return this.omegaProductRepository.updateAll(omegaProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/omega-products/{id}')
   @response(200, {
     description: 'OmegaProduct model instance',

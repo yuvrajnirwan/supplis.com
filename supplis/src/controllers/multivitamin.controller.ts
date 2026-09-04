@@ -50,6 +50,7 @@ export class MultivitaminController {
     return this.multivitaminProductRepository.create(multivitaminProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/multivitamin-products/count')
   @response(200, {
     description: 'MultivitaminProduct model count',
@@ -61,6 +62,7 @@ export class MultivitaminController {
     return this.multivitaminProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/multivitamin-products')
   @response(200, {
     description: 'Array of MultivitaminProduct model instances',
@@ -98,8 +100,7 @@ export class MultivitaminController {
   ): Promise<Count> {
     return this.multivitaminProductRepository.updateAll(multivitaminProduct, where);
   }
-  @authenticate(STRATEGY.BEARER)
-  @authorize({permissions: ['Admin', 'Manager']})
+  @authorize({permissions: ['*']})
   @get('/multivitamin-products/{id}')
   @response(200, {
     description: 'MultivitaminProduct model instance',

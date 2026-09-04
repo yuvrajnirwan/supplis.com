@@ -50,6 +50,7 @@ export class SaltController {
     return this.saltProductRepository.create(saltProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/salt-products/count')
   @response(200, {
     description: 'SaltProduct model count',
@@ -61,6 +62,7 @@ export class SaltController {
     return this.saltProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/salt-products')
   @response(200, {
     description: 'Array of SaltProduct model instances',
@@ -99,6 +101,7 @@ export class SaltController {
     return this.saltProductRepository.updateAll(saltProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/salt-products/{id}')
   @response(200, {
     description: 'SaltProduct model instance',

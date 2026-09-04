@@ -50,6 +50,7 @@ export class SingleVitaminController {
     return this.singleVitaminProductRepository.create(singleVitaminProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/single-vitamin-products/count')
   @response(200, {
     description: 'SingleVitaminProduct model count',
@@ -61,6 +62,7 @@ export class SingleVitaminController {
     return this.singleVitaminProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/single-vitamin-products')
   @response(200, {
     description: 'Array of SingleVitaminProduct model instances',
@@ -99,6 +101,7 @@ export class SingleVitaminController {
     return this.singleVitaminProductRepository.updateAll(singleVitaminProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/single-vitamin-products/{id}')
   @response(200, {
     description: 'SingleVitaminProduct model instance',

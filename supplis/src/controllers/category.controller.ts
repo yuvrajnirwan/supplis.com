@@ -19,6 +19,8 @@ import {
 } from '@loopback/rest';
 import {Category} from '../models';
 import {CategoryRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class CategoryController {
   constructor(
@@ -26,6 +28,8 @@ export class CategoryController {
     public categoryRepository : CategoryRepository,
   ) {}
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/categories')
   @response(200, {
     description: 'Category model instance',
@@ -47,6 +51,7 @@ export class CategoryController {
     return this.categoryRepository.create(category);
   }
 
+  @authorize({permissions: ['*']})
   @get('/categories/count')
   @response(200, {
     description: 'Category model count',
@@ -58,6 +63,7 @@ export class CategoryController {
     return this.categoryRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/categories')
   @response(200, {
     description: 'Array of Category model instances',
@@ -76,6 +82,8 @@ export class CategoryController {
     return this.categoryRepository.find(filter);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/categories')
   @response(200, {
     description: 'Category PATCH success count',
@@ -95,6 +103,7 @@ export class CategoryController {
     return this.categoryRepository.updateAll(category, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/categories/{id}')
   @response(200, {
     description: 'Category model instance',
@@ -111,6 +120,8 @@ export class CategoryController {
     return this.categoryRepository.findById(id, filter);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/categories/{id}')
   @response(204, {
     description: 'Category PATCH success',
@@ -129,6 +140,8 @@ export class CategoryController {
     await this.categoryRepository.updateById(id, category);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/categories/{id}')
   @response(204, {
     description: 'Category PUT success',
@@ -140,6 +153,8 @@ export class CategoryController {
     await this.categoryRepository.replaceById(id, category);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/categories/{id}')
   @response(204, {
     description: 'Category DELETE success',

@@ -1,5 +1,5 @@
-const API_BASE_URL = process.env.VITE_API_BASE_URL || 'http://localhost:3000';
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL || 'https://hboaizlxmcqlsefqqygi.supabase.co';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://hboaizlxmcqlsefqqygi.supabase.co';
 
 const ENDPOINT_MAP: Record<string, string[]> = {
     proteins: ['protein-products'],
