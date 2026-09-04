@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {PreWorkoutProduct} from '../models';
 import {PreWorkoutProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class PreworkoutController {
   constructor(
     @repository(PreWorkoutProductRepository)
     public preWorkoutProductRepository : PreWorkoutProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/pre-workout-products')
   @response(200, {
     description: 'PreWorkoutProduct model instance',
@@ -75,7 +78,8 @@ export class PreworkoutController {
   ): Promise<PreWorkoutProduct[]> {
     return this.preWorkoutProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/pre-workout-products')
   @response(200, {
     description: 'PreWorkoutProduct PATCH success count',
@@ -110,7 +114,8 @@ export class PreworkoutController {
   ): Promise<PreWorkoutProduct> {
     return this.preWorkoutProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/pre-workout-products/{id}')
   @response(204, {
     description: 'PreWorkoutProduct PATCH success',
@@ -128,7 +133,8 @@ export class PreworkoutController {
   ): Promise<void> {
     await this.preWorkoutProductRepository.updateById(id, preWorkoutProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/pre-workout-products/{id}')
   @response(204, {
     description: 'PreWorkoutProduct PUT success',
@@ -139,7 +145,8 @@ export class PreworkoutController {
   ): Promise<void> {
     await this.preWorkoutProductRepository.replaceById(id, preWorkoutProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/pre-workout-products/{id}')
   @response(204, {
     description: 'PreWorkoutProduct DELETE success',

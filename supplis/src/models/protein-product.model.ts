@@ -54,6 +54,21 @@ export class ProteinProduct extends Entity {
   };
 
   @property({
+    type: 'string',
+  })
+  imageUrl?: string;
+
+  @property({
+    type: 'number',
+  })
+  priceInr?: number;
+
+  @property({
+    type: 'number',
+  })
+  mrpInr?: number;
+
+  @property({
     type: 'array',
     itemType: 'object',
   })

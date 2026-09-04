@@ -7,7 +7,7 @@ export const CartPage: React.FC = () => {
 
     const getFullImageUrl = (imagePath: string) => {
         if (imagePath?.startsWith('http')) return imagePath;
-        const baseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://your-supabase-url.supabase.co';
+        const baseUrl = import.meta.env.VITE_SUPABASE_URL;
         return `${baseUrl}${imagePath}`;
     };
 
@@ -98,9 +98,9 @@ export const CartPage: React.FC = () => {
                                 <span className="text-2xl font-bold text-[#ff9900]">₹{cartTotal}</span>
                             </div>
 
-                            <button className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 rounded-lg transition-colors">
+                            <Link to="/checkout" className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 rounded-lg transition-colors text-center inline-block">
                                 Proceed to Checkout
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

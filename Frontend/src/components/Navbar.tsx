@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useAuth } from "../context/AuthContext";
 import "../css/navbar.css";
 
 function Navbar() {
@@ -10,6 +11,7 @@ function Navbar() {
 
     // Pull the real cart count from our global context
     const { cartItemCount } = useCart();
+    const { user, isAuthenticated } = useAuth();
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen((prev) => !prev);
@@ -19,6 +21,14 @@ function Navbar() {
         if (e.key === "Enter" && searchQuery.trim()) {
             navigate(`/ProductListing?search=${encodeURIComponent(searchQuery.trim())}`);
             setIsMobileMenuOpen(false);
+        }
+    };
+
+    const handleAccountClick = (e: React.MouseEvent) => {
+        setIsMobileMenuOpen(false);
+        if (!isAuthenticated) {
+            e.preventDefault();
+            navigate('/login', { state: { from: { pathname: '/account' } } });
         }
     };
 
@@ -64,9 +74,21 @@ function Navbar() {
                         </NavLink>
                     </li>
                     <li className="navlink" id="user">
-                        <NavLink to="/account" onClick={() => setIsMobileMenuOpen(false)}>
-                            Account
-                        </NavLink>
+                        {isAuthenticated && user ? (
+                            <NavLink to="/account" onClick={() => setIsMobileMenuOpen(false)}>
+                                <span className="d-inline-flex align-items-center gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                        <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                                    </svg>
+                                    {user.firstName || user.name || user.username}
+                                </span>
+                            </NavLink>
+                        ) : (
+                            <NavLink to="/login" state={{ from: { pathname: '/account' } }} onClick={handleAccountClick}>
+                                Account
+                            </NavLink>
+                        )}
                     </li>
                 </ul>
 

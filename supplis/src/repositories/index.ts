@@ -8,3 +8,5 @@ export * from './protein-product.repository';
 export * from './salt-product.repository';
 export * from './single-vitamin-product.repository';
 export * from './weight-management-product.repository';
+export * from './cart.repository';
+export * from './cart-item.repository';

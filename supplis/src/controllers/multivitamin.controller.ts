@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {MultivitaminProduct} from '../models';
 import {MultivitaminProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class MultivitaminController {
   constructor(
     @repository(MultivitaminProductRepository)
     public multivitaminProductRepository : MultivitaminProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/multivitamin-products')
   @response(200, {
     description: 'MultivitaminProduct model instance',
@@ -75,7 +78,8 @@ export class MultivitaminController {
   ): Promise<MultivitaminProduct[]> {
     return this.multivitaminProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/multivitamin-products')
   @response(200, {
     description: 'MultivitaminProduct PATCH success count',
@@ -94,7 +98,8 @@ export class MultivitaminController {
   ): Promise<Count> {
     return this.multivitaminProductRepository.updateAll(multivitaminProduct, where);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @get('/multivitamin-products/{id}')
   @response(200, {
     description: 'MultivitaminProduct model instance',
@@ -110,7 +115,8 @@ export class MultivitaminController {
   ): Promise<MultivitaminProduct> {
     return this.multivitaminProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/multivitamin-products/{id}')
   @response(204, {
     description: 'MultivitaminProduct PATCH success',
@@ -128,7 +134,8 @@ export class MultivitaminController {
   ): Promise<void> {
     await this.multivitaminProductRepository.updateById(id, multivitaminProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/multivitamin-products/{id}')
   @response(204, {
     description: 'MultivitaminProduct PUT success',
@@ -139,7 +146,8 @@ export class MultivitaminController {
   ): Promise<void> {
     await this.multivitaminProductRepository.replaceById(id, multivitaminProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/multivitamin-products/{id}')
   @response(204, {
     description: 'MultivitaminProduct DELETE success',

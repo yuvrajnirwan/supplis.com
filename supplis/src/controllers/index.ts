@@ -27,3 +27,6 @@ export * from './category-protein-product.controller';
 export * from './category-salt-product.controller';
 export * from './category-single-vitamin-product.controller';
 export * from './category-weight-management-product.controller';
+export * from './cart-cart-item.controller';
+export * from './user-signup.controller';
+export * from './user-info.controller';

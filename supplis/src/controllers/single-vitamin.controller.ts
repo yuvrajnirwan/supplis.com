@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {SingleVitaminProduct} from '../models';
 import {SingleVitaminProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class SingleVitaminController {
   constructor(
     @repository(SingleVitaminProductRepository)
     public singleVitaminProductRepository : SingleVitaminProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/single-vitamin-products')
   @response(200, {
     description: 'SingleVitaminProduct model instance',
@@ -75,7 +78,8 @@ export class SingleVitaminController {
   ): Promise<SingleVitaminProduct[]> {
     return this.singleVitaminProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/single-vitamin-products')
   @response(200, {
     description: 'SingleVitaminProduct PATCH success count',
@@ -110,7 +114,8 @@ export class SingleVitaminController {
   ): Promise<SingleVitaminProduct> {
     return this.singleVitaminProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/single-vitamin-products/{id}')
   @response(204, {
     description: 'SingleVitaminProduct PATCH success',
@@ -128,7 +133,8 @@ export class SingleVitaminController {
   ): Promise<void> {
     await this.singleVitaminProductRepository.updateById(id, singleVitaminProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/single-vitamin-products/{id}')
   @response(204, {
     description: 'SingleVitaminProduct PUT success',
@@ -139,7 +145,8 @@ export class SingleVitaminController {
   ): Promise<void> {
     await this.singleVitaminProductRepository.replaceById(id, singleVitaminProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/single-vitamin-products/{id}')
   @response(204, {
     description: 'SingleVitaminProduct DELETE success',
