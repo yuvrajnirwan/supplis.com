@@ -61,7 +61,7 @@ export class CategoryAminoProductController {
           schema: getModelSchemaRef(AminoProduct, {
             title: 'NewAminoProductInCategory',
             exclude: ['id'],
-            optional: ['categoryId']
+            optional: ['category']
           }),
         },
       },

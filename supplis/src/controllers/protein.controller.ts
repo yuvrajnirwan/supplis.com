@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {ProteinProduct} from '../models';
 import {ProteinProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class ProteinController {
   constructor(
     @repository(ProteinProductRepository)
     public proteinProductRepository : ProteinProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/protein-products')
   @response(200, {
     description: 'ProteinProduct model instance',
@@ -47,6 +50,7 @@ export class ProteinController {
     return this.proteinProductRepository.create(proteinProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/protein-products/count')
   @response(200, {
     description: 'ProteinProduct model count',
@@ -58,6 +62,7 @@ export class ProteinController {
     return this.proteinProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/protein-products')
   @response(200, {
     description: 'Array of ProteinProduct model instances',
@@ -75,7 +80,8 @@ export class ProteinController {
   ): Promise<ProteinProduct[]> {
     return this.proteinProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/protein-products')
   @response(200, {
     description: 'ProteinProduct PATCH success count',
@@ -95,6 +101,7 @@ export class ProteinController {
     return this.proteinProductRepository.updateAll(proteinProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/protein-products/{id}')
   @response(200, {
     description: 'ProteinProduct model instance',
@@ -110,7 +117,8 @@ export class ProteinController {
   ): Promise<ProteinProduct> {
     return this.proteinProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/protein-products/{id}')
   @response(204, {
     description: 'ProteinProduct PATCH success',
@@ -128,7 +136,8 @@ export class ProteinController {
   ): Promise<void> {
     await this.proteinProductRepository.updateById(id, proteinProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/protein-products/{id}')
   @response(204, {
     description: 'ProteinProduct PUT success',
@@ -139,7 +148,8 @@ export class ProteinController {
   ): Promise<void> {
     await this.proteinProductRepository.replaceById(id, proteinProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/protein-products/{id}')
   @response(204, {
     description: 'ProteinProduct DELETE success',

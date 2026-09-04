@@ -19,6 +19,8 @@ import {
 } from '@loopback/rest';
 import { AminoProduct } from '../models';
 import { AminoProductRepository } from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class AminoProductController {
   constructor(
@@ -26,6 +28,8 @@ export class AminoProductController {
     public aminoProductRepository: AminoProductRepository,
   ) {}
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/amino-products')
   @response(200, {
     description: 'AminoProduct model instance',
@@ -46,6 +50,7 @@ export class AminoProductController {
     return this.aminoProductRepository.create(aminoProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/amino-products/count')
   @response(200, {
     description: 'AminoProduct model count',
@@ -57,6 +62,7 @@ export class AminoProductController {
     return this.aminoProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/amino-products')
   @response(200, {
     description: 'Array of AminoProduct model instances',
@@ -75,6 +81,8 @@ export class AminoProductController {
     return this.aminoProductRepository.find(filter);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/amino-products')
   @response(200, {
     description: 'AminoProduct PATCH success count',
@@ -94,6 +102,7 @@ export class AminoProductController {
     return this.aminoProductRepository.updateAll(aminoProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/amino-products/{id}')
   @response(200, {
     description: 'AminoProduct model instance',
@@ -110,6 +119,8 @@ export class AminoProductController {
     return this.aminoProductRepository.findById(id, filter);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/amino-products/{id}')
   @response(204, {
     description: 'AminoProduct PATCH success',
@@ -128,6 +139,8 @@ export class AminoProductController {
     await this.aminoProductRepository.updateById(id, aminoProduct);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/amino-products/{id}')
   @response(204, {
     description: 'AminoProduct PUT success',
@@ -139,6 +152,8 @@ export class AminoProductController {
     await this.aminoProductRepository.replaceById(id, aminoProduct);
   }
 
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/amino-products/{id}')
   @response(204, {
     description: 'AminoProduct DELETE success',

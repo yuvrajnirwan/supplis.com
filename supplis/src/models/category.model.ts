@@ -16,7 +16,7 @@ export class Category extends Entity {
     id: true,
     defaultFn: 'uuid',
   })
-  id?: string;
+  id: string;
 
   @property({
     type: 'string',

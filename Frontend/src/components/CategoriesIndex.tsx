@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SUPABASE_BASE_URL =
-    process.env.VITE_SUPABASE_URL;
+    import.meta.env.VITE_SUPABASE_URL || 'https://hboaizlxmcqlsefqqygi.supabase.co';
 
 interface CategoryItem {
     slug: string;
@@ -31,9 +31,15 @@ const CATEGORIES: CategoryItem[] = [
         image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/CategoryPage/pre.jpg`,
     },
     {
+        slug: 'vitamins',
+        title: 'Daily Vitamins & Wellness',
+        badgeText: 'Vitamins',
+        image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/CategoryPage/vita.webp`,
+    },
+    {
         slug: 'multivitamins',
         title: 'Daily Multivitamins & Minerals',
-        badgeText: 'Vitamins',
+        badgeText: 'Multivitamins',
         image: `${SUPABASE_BASE_URL}/storage/v1/object/public/Supplies/CategoryPage/multivita.jpg`,
     },
     {

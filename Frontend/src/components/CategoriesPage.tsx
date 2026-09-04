@@ -16,6 +16,10 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
         title: 'Daily Vitamins & Wellness',
         description: 'Multivitamins, Vitamin D3, Vitamin C, and essential micronutrient blends.',
     },
+    'd3-k2': {
+        title: 'Vitamin D3 + K2',
+        description: 'Support bone health, immunity, and cardiovascular function with D3 and K2 synergy.',
+    },
     multivitamins: {
         title: 'Daily Multivitamins & Minerals',
         description: 'Complete nutrient support for daily energy and immune function.',
@@ -28,6 +32,14 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
         title: 'Hydration & Electrolyte Salts',
         description: 'Rehydrate faster with WHO-formula salts, effervescent tablets, and intra-workout EAAs.',
     },
+    'omega-3': {
+        title: 'Omega-3 Fish Oils',
+        description: 'Daily EPA and DHA support for heart, brain, and joint health.',
+    },
+    'amino-acids': {
+        title: 'BCAAs & EAAs',
+        description: 'Promote recovery, endurance, and muscle protein synthesis with essential amino acids.',
+    },
     'weight-management': {
         title: 'Fat Loss & Weight Management',
         description: 'Liquid L-Carnitine, CLA 1250, and thermogenic lipolytic capsules.',
@@ -36,22 +48,23 @@ const CATEGORY_META: Record<string, { title: string; description: string }> = {
 
 export const CategoryPage: React.FC = () => {
     const { categorySlug = 'proteins' } = useParams<{ categorySlug: string }>();
+    const normalizedSlug = (categorySlug || 'proteins').trim().toLowerCase();
     const [products, setProducts] = React.useState<any[]>([]);
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
         // eslint-disable-next-line react-hooks/set-state-in-effect
         setLoading(true);
-        getProductsByCategorySlug(categorySlug)
+        getProductsByCategorySlug(normalizedSlug)
             .then(data => {
                 setProducts(data);
                 setLoading(false);
             })
             .catch(() => setLoading(false));
-    }, [categorySlug]);
+    }, [normalizedSlug]);
 
-    const meta = CATEGORY_META[categorySlug] || {
-        title: `${categorySlug.toUpperCase()} Catalog`,
+    const meta = CATEGORY_META[normalizedSlug] || {
+        title: `${normalizedSlug.toUpperCase()} Catalog`,
         description: 'Explore our lab-tested authentic supplements.',
     };
 
@@ -110,7 +123,7 @@ export const CategoryPage: React.FC = () => {
                                             <div>
                                                 {/* Category Badge */}
                                                 <span className="badge bg-light text-dark border fw-normal mb-2 px-2 py-1">
-                                                    {product.category || categorySlug}
+                                                    {product.category || normalizedSlug}
                                                 </span>
 
                                                 {/* Title */}

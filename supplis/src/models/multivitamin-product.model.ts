@@ -1,7 +1,7 @@
-import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
 import {Category} from './category.model';
 
-@model({settings: {strict: false}})
+@model({settings: {strict: true}})
 export class MultivitaminProduct extends Entity {
   @property({
     type: 'string',
@@ -27,7 +27,7 @@ export class MultivitaminProduct extends Entity {
     type: 'string',
     required: false,
   })
-  category: string;
+  category?: string;
 
   @property({
     type: 'string',
@@ -46,18 +46,33 @@ export class MultivitaminProduct extends Entity {
   nutritionFacts?: {
     servingSizeTablets?: number;
     servingsPerContainer?: number;
-    vitaminA_mcg?: number;
-    vitaminC_mg?: number;
-    vitaminD3_IU?: number;
-    vitaminB12_mcg?: number;
-    zinc_mg?: number;
-    iron_mg?: number;
-    digestiveEnzymeBlend_mg?: number;
-    aminoAcidBlend_mg?: number;
-    omega3_mg?: number;
-    ashwagandhaExtract_mg?: number;
-    wholefoodBlend_mg?: number;
+    vitaminAMcg?: number;
+    vitaminCMg?: number;
+    vitaminD3IU?: number;
+    vitaminB12Mcg?: number;
+    zincMg?: number;
+    ironMg?: number;
+    digestiveEnzymeBlendMg?: number;
+    aminoAcidBlendMg?: number;
+    omega3Mg?: number;
+    ashwagandhaExtractMg?: number;
+    wholefoodBlendMg?: number;
   };
+
+  @property({
+    type: 'string',
+  })
+  imageUrl?: string;
+
+  @property({
+    type: 'number',
+  })
+  priceInr?: number;
+
+  @property({
+    type: 'number',
+  })
+  mrpInr?: number;
 
   @property({
     type: 'array',

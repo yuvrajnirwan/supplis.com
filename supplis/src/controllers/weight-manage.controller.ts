@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {WeightManagementProduct} from '../models';
 import {WeightManagementProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class WeightManageController {
   constructor(
     @repository(WeightManagementProductRepository)
     public weightManagementProductRepository : WeightManagementProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/weight-management-products')
   @response(200, {
     description: 'WeightManagementProduct model instance',
@@ -47,6 +50,7 @@ export class WeightManageController {
     return this.weightManagementProductRepository.create(weightManagementProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/weight-management-products/count')
   @response(200, {
     description: 'WeightManagementProduct model count',
@@ -58,6 +62,7 @@ export class WeightManageController {
     return this.weightManagementProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/weight-management-products')
   @response(200, {
     description: 'Array of WeightManagementProduct model instances',
@@ -75,7 +80,8 @@ export class WeightManageController {
   ): Promise<WeightManagementProduct[]> {
     return this.weightManagementProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/weight-management-products')
   @response(200, {
     description: 'WeightManagementProduct PATCH success count',
@@ -95,6 +101,7 @@ export class WeightManageController {
     return this.weightManagementProductRepository.updateAll(weightManagementProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/weight-management-products/{id}')
   @response(200, {
     description: 'WeightManagementProduct model instance',
@@ -110,7 +117,8 @@ export class WeightManageController {
   ): Promise<WeightManagementProduct> {
     return this.weightManagementProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/weight-management-products/{id}')
   @response(204, {
     description: 'WeightManagementProduct PATCH success',
@@ -128,7 +136,8 @@ export class WeightManageController {
   ): Promise<void> {
     await this.weightManagementProductRepository.updateById(id, weightManagementProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/weight-management-products/{id}')
   @response(204, {
     description: 'WeightManagementProduct PUT success',
@@ -139,7 +148,8 @@ export class WeightManageController {
   ): Promise<void> {
     await this.weightManagementProductRepository.replaceById(id, weightManagementProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/weight-management-products/{id}')
   @response(204, {
     description: 'WeightManagementProduct DELETE success',

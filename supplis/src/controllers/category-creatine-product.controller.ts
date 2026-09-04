@@ -61,7 +61,7 @@ export class CategoryCreatineProductController {
           schema: getModelSchemaRef(CreatineProduct, {
             title: 'NewCreatineProductInCategory',
             exclude: ['id'],
-            optional: ['categoryId']
+            optional: ['category']
           }),
         },
       },

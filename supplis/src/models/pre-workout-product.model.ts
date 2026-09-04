@@ -1,7 +1,7 @@
 import { Entity, model, property, belongsTo} from '@loopback/repository';
 import {Category} from './category.model';
 
-@model({settings: {strict: false}})
+@model({settings: {strict: true}})
 export class PreWorkoutProduct extends Entity {
   @property({
     type: 'string',
@@ -53,6 +53,21 @@ export class PreWorkoutProduct extends Entity {
     lArginineMg?: number;
     tyrosineMg?: number;
   };
+
+  @property({
+    type: 'string',
+  })
+  imageUrl?: string;
+
+  @property({
+    type: 'number',
+  })
+  priceInr?: number;
+
+  @property({
+    type: 'number',
+  })
+  mrpInr?: number;
 
   @property({
     type: 'array',

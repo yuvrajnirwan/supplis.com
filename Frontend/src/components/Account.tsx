@@ -1,25 +1,41 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+﻿import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 export const Account: React.FC = () => {
-
+    const navigate = useNavigate();
+    const { user, isAuthenticated, loading, logout } = useAuth();
     const [activeTab, setActiveTab] = useState('dashboard');
 
-    // Dummy user data
-    const user = {
-        name: "John Doe",
-        email: "john.doe@example.com",
-        phone: "+91 98765 43210",
-        joinDate: "August 2023",
-        rewardPoints: 450
+    useEffect(() => {
+        if (!loading && !isAuthenticated) {
+            navigate('/login', { replace: true, state: { from: { pathname: '/account' } } });
+        }
+    }, [loading, isAuthenticated, navigate]);
+
+    const handleLogout = () => {
+        logout();
+        navigate('/login', { replace: true });
     };
 
-    // Dummy orders data
+    // Dummy orders data (can be replaced with a fetch call to your orders endpoint)
     const orders = [
         { id: "SP-10923", date: "Aug 10, 2026", total: "₹4,599", status: "Delivered", item: "Whey Protein Isolate - 2kg" },
         { id: "SP-10899", date: "Jul 25, 2026", total: "₹999", status: "Delivered", item: "Micronized Creatine - 250g" },
         { id: "SP-11004", date: "Aug 12, 2026", total: "₹1,899", status: "Processing", item: "Pre-Workout Energy - 30 Servings" }
     ];
+
+    if (loading) {
+        return (
+            <div className="flex min-h-screen items-center justify-center bg-gray-50">
+                <p className="text-gray-500 font-medium">Loading Account Details...</p>
+            </div>
+        );
+    }
+
+    if (!isAuthenticated || !user) {
+        return null;
+    }
 
     return (
         <div className="bg-gray-50 min-h-screen pb-16 pt-8">
@@ -70,12 +86,12 @@ export const Account: React.FC = () => {
                                     </button>
                                 </li>
                                 <li>
-                                    <Link
-                                        to="/"
-                                        className="block w-full text-left px-6 py-4 font-medium text-red-500 hover:bg-red-50 transition-colors border-l-4 border-l-transparent border-t border-t-gray-50"
+                                    <button
+                                        onClick={handleLogout}
+                                        className="w-full text-left px-6 py-4 font-medium text-red-500 hover:bg-red-50 transition-colors border-l-4 border-l-transparent border-t border-t-gray-50"
                                     >
                                         Logout
-                                    </Link>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
@@ -90,7 +106,7 @@ export const Account: React.FC = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center">
                                         <div className="w-14 h-14 bg-gray-900 rounded-full flex items-center justify-center text-[#ff9900] mr-4 text-xl font-bold">
-                                            {user.name.charAt(0)}
+                                            {user.name.charAt(0).toUpperCase()}
                                         </div>
                                         <div>
                                             <h3 className="text-lg font-bold text-gray-900">{user.name}</h3>
@@ -165,7 +181,6 @@ export const Account: React.FC = () => {
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        {/* Default Address Card */}
                                         <div className="border-2 border-[#ff9900] rounded-xl p-5 relative">
                                             <span className="absolute -top-3 left-4 bg-[#ff9900] text-black text-xs font-bold px-2 py-1 rounded">Default</span>
                                             <h4 className="font-bold text-gray-900 mb-2">{user.name}</h4>
@@ -214,7 +229,7 @@ export const Account: React.FC = () => {
                                         <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
                                         <input
                                             type="email"
-                                            defaultValue={user.email}
+                                            value={user.email}
                                             disabled
                                             className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-500 outline-none cursor-not-allowed"
                                         />

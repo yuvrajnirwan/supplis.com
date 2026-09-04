@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {SaltProduct} from '../models';
 import {SaltProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class SaltController {
   constructor(
     @repository(SaltProductRepository)
     public saltProductRepository : SaltProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/salt-products')
   @response(200, {
     description: 'SaltProduct model instance',
@@ -47,6 +50,7 @@ export class SaltController {
     return this.saltProductRepository.create(saltProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/salt-products/count')
   @response(200, {
     description: 'SaltProduct model count',
@@ -58,6 +62,7 @@ export class SaltController {
     return this.saltProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/salt-products')
   @response(200, {
     description: 'Array of SaltProduct model instances',
@@ -75,7 +80,8 @@ export class SaltController {
   ): Promise<SaltProduct[]> {
     return this.saltProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/salt-products')
   @response(200, {
     description: 'SaltProduct PATCH success count',
@@ -95,6 +101,7 @@ export class SaltController {
     return this.saltProductRepository.updateAll(saltProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/salt-products/{id}')
   @response(200, {
     description: 'SaltProduct model instance',
@@ -110,7 +117,8 @@ export class SaltController {
   ): Promise<SaltProduct> {
     return this.saltProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/salt-products/{id}')
   @response(204, {
     description: 'SaltProduct PATCH success',
@@ -128,7 +136,8 @@ export class SaltController {
   ): Promise<void> {
     await this.saltProductRepository.updateById(id, saltProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/salt-products/{id}')
   @response(204, {
     description: 'SaltProduct PUT success',
@@ -139,7 +148,8 @@ export class SaltController {
   ): Promise<void> {
     await this.saltProductRepository.replaceById(id, saltProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/salt-products/{id}')
   @response(204, {
     description: 'SaltProduct DELETE success',

@@ -1,6 +1,7 @@
-import { Entity, model, property } from '@loopback/repository';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { Category } from './category.model';
 
-@model({ settings: { strict: false } })
+@model({ settings: { strict: true } })
 export class CreatineProduct extends Entity {
   @property({
     type: 'string',
@@ -24,9 +25,9 @@ export class CreatineProduct extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    required: false,
   })
-  category: string;
+  category?: string;
 
   @property({
     type: 'string',
@@ -51,6 +52,21 @@ export class CreatineProduct extends Entity {
   };
 
   @property({
+    type: 'string',
+  })
+  imageUrl?: string;
+
+  @property({
+    type: 'number',
+  })
+  priceInr?: number;
+
+  @property({
+    type: 'number',
+  })
+  mrpInr?: number;
+
+  @property({
     type: 'array',
     itemType: 'object',
   })
@@ -69,6 +85,9 @@ export class CreatineProduct extends Entity {
       altText: string;
     }[];
   }[];
+
+  @belongsTo(() => Category)
+  categoryId: string;
 
   constructor(data?: Partial<CreatineProduct>) {
     super(data);

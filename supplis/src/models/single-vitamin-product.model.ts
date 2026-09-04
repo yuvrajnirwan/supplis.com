@@ -1,7 +1,7 @@
-import { Entity, model, property, belongsTo} from '@loopback/repository';
+import {Entity, model, property, belongsTo} from '@loopback/repository';
 import {Category} from './category.model';
 
-@model({settings: {strict: false}})
+@model({settings: {strict: true}})
 export class SingleVitaminProduct extends Entity {
   @property({
     type: 'string',
@@ -27,7 +27,7 @@ export class SingleVitaminProduct extends Entity {
     type: 'string',
     required: false,
   })
-  category: string;
+  category?: string;
 
   @property({
     type: 'string',
@@ -47,17 +47,32 @@ export class SingleVitaminProduct extends Entity {
     servingSizeCapsules?: number;
     servingSizeTablets?: number;
     servingsPerContainer?: number;
-    vitaminD3_IU?: number;
-    vitaminD3_mcg?: number;
-    vitaminC_mg?: number;
-    zinc_mg?: number;
-    amlaExtract_mg?: number;
-    vitaminB12_mcg?: number;
+    vitaminD3Iu?: number;
+    vitaminD3Mcg?: number;
+    vitaminCMg?: number;
+    zincMg?: number;
+    amlaExtractMg?: number;
+    vitaminB12Mcg?: number;
     activeForm?: string;
-    vitaminE_IU?: number;
-    vitaminE_mg?: number;
-    vitaminK2_MK7_mcg?: number;
+    vitaminEIu?: number;
+    vitaminEMg?: number;
+    vitaminK2Mk7Mcg?: number;
   };
+
+  @property({
+    type: 'string',
+  })
+  imageUrl?: string;
+
+  @property({
+    type: 'number',
+  })
+  priceInr?: number;
+
+  @property({
+    type: 'number',
+  })
+  mrpInr?: number;
 
   @property({
     type: 'array',
@@ -88,4 +103,5 @@ export class SingleVitaminProduct extends Entity {
 
 export interface SingleVitaminProductRelations {}
 
-export type SingleVitaminProductWithRelations = SingleVitaminProduct & SingleVitaminProductRelations;
+export type SingleVitaminProductWithRelations =
+  SingleVitaminProduct & SingleVitaminProductRelations;

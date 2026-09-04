@@ -58,16 +58,26 @@
     "@loopback/service-proxy": "^8.0.14",
     "@sourceloop/authentication-service": "^25.1.0",
     "dotenv": "^17.4.2",
+    "loopback-connector-kv-redis": "^4.0.0",
     "loopback-connector-postgresql": "^7.2.3",
+    "loopback4-authentication": "^14.0.1",
+    "loopback4-authorization": "^9.0.1",
+    "node-addon-api": "^8.9.2",
+    "prom-client": "^15.1.3",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@loopback/build": "^12.0.14",
     "@loopback/eslint-config": "^16.0.1",
     "@loopback/testlab": "^8.0.14",
+    "@types/bcrypt": "^6.0.0",
     "@types/node": "^20.19.43",
+    "bcrypt": "^6.0.0",
     "eslint": "^8.57.1",
     "source-map-support": "^0.5.21",
     "typescript": "~5.2.2"
+  },
+  "allowScripts": {
+    "bcrypt@5.1.1": true
   }
 }

@@ -19,13 +19,16 @@ import {
 } from '@loopback/rest';
 import {OmegaProduct} from '../models';
 import {OmegaProductRepository} from '../repositories';
+import { authenticate, STRATEGY } from "loopback4-authentication";
+import { authorize } from "loopback4-authorization";
 
 export class OmegaController {
   constructor(
     @repository(OmegaProductRepository)
     public omegaProductRepository : OmegaProductRepository,
   ) {}
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @post('/omega-products')
   @response(200, {
     description: 'OmegaProduct model instance',
@@ -47,6 +50,7 @@ export class OmegaController {
     return this.omegaProductRepository.create(omegaProduct);
   }
 
+  @authorize({permissions: ['*']})
   @get('/omega-products/count')
   @response(200, {
     description: 'OmegaProduct model count',
@@ -58,6 +62,7 @@ export class OmegaController {
     return this.omegaProductRepository.count(where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/omega-products')
   @response(200, {
     description: 'Array of OmegaProduct model instances',
@@ -75,7 +80,8 @@ export class OmegaController {
   ): Promise<OmegaProduct[]> {
     return this.omegaProductRepository.find(filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/omega-products')
   @response(200, {
     description: 'OmegaProduct PATCH success count',
@@ -95,6 +101,7 @@ export class OmegaController {
     return this.omegaProductRepository.updateAll(omegaProduct, where);
   }
 
+  @authorize({permissions: ['*']})
   @get('/omega-products/{id}')
   @response(200, {
     description: 'OmegaProduct model instance',
@@ -110,7 +117,8 @@ export class OmegaController {
   ): Promise<OmegaProduct> {
     return this.omegaProductRepository.findById(id, filter);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @patch('/omega-products/{id}')
   @response(204, {
     description: 'OmegaProduct PATCH success',
@@ -128,7 +136,8 @@ export class OmegaController {
   ): Promise<void> {
     await this.omegaProductRepository.updateById(id, omegaProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @put('/omega-products/{id}')
   @response(204, {
     description: 'OmegaProduct PUT success',
@@ -139,7 +148,8 @@ export class OmegaController {
   ): Promise<void> {
     await this.omegaProductRepository.replaceById(id, omegaProduct);
   }
-
+  @authenticate(STRATEGY.BEARER)
+  @authorize({permissions: ['Admin', 'Manager']})
   @del('/omega-products/{id}')
   @response(204, {
     description: 'OmegaProduct DELETE success',
