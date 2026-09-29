@@ -40,6 +40,7 @@ export default function LoginPage() {
             }
 
             let token = data.accessToken || data.access_token || data.token;
+            let refreshToken = data.refreshToken || data.refresh_token;
 
             // 2. Exchange Authorization Code for JWT Token if code is returned
             if (!token && data.code) {
@@ -57,11 +58,12 @@ export default function LoginPage() {
                     throw new Error(tokenData.error?.message || tokenData.message || 'Failed to generate token.');
                 }
                 token = tokenData.accessToken || tokenData.access_token || tokenData.token;
+                refreshToken = tokenData.refreshToken || tokenData.refresh_token;
             }
 
             // 3. Persist Token & Redirect User
             if (token) {
-                const profile = await login(token);
+                const profile = await login(token, refreshToken);
                 if (!profile) {
                     throw new Error('Unable to verify the signed-in user.');
                 }
