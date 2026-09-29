@@ -88,7 +88,7 @@ export const ChatWidget: React.FC = () => {
         }
     };
 
-    if (!user) return null; // Don't show chat to logged-out users
+    if (!user) return null;
 
     return (
         <div className="position-fixed bottom-0 end-0 p-3" style={{ zIndex: 1050 }}>
