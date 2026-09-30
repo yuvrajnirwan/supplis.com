@@ -40,6 +40,7 @@ import Checkout from "./components/Checkout";
 
 import AdminAddProduct from "./components/AdminAddProduct";
 import { ChatWidget } from "./components/ChatWidget";
+import { NotificationToasts } from "./components/NotificationToasts";
 
 
 
@@ -315,6 +316,7 @@ export default function App() {
 
                         <Footer />
                         <ChatWidget />
+                        <NotificationToasts />
                     </div>
 
                 </Router>

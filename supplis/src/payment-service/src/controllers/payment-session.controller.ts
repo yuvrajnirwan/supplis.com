@@ -9,7 +9,12 @@ import {
 } from 'loopback4-authentication';
 import {v4 as uuidv4} from 'uuid';
 import {createHmac, timingSafeEqual} from 'crypto';
-import {OrdersRepository, PaymentGatewaysRepository, TransactionsRepository} from '@sourceloop/payment-service';
+import {
+  OrdersRepository,
+  PaymentGatewaysRepository,
+  TransactionsRepository,
+} from '@sourceloop/payment-service';
+import {publishPaidOrderNotification} from '../services/paid-order-notification.service';
 
 const Razorpay = require('razorpay');
 
@@ -52,7 +57,11 @@ export class PaymentSessionController {
     @requestBody() request: PaymentSessionRequest,
     @inject(AuthenticationBindings.CURRENT_USER) currentUser: IAuthUser,
   ): Promise<object> {
-    if (!request.orderId || !Number.isFinite(request.amount) || request.amount <= 0) {
+    if (
+      !request.orderId ||
+      !Number.isFinite(request.amount) ||
+      request.amount <= 0
+    ) {
       throw new HttpErrors.UnprocessableEntity(
         'orderId and a positive amount are required.',
       );
@@ -73,8 +82,13 @@ export class PaymentSessionController {
         receipt: request.orderId,
       });
     } catch (error) {
-      const message = error instanceof Error ? error.message : 'Razorpay rejected the payment order.';
-      throw new HttpErrors.BadGateway(`Unable to create Razorpay order: ${message}`);
+      const message =
+        error instanceof Error
+          ? error.message
+          : 'Razorpay rejected the payment order.';
+      throw new HttpErrors.BadGateway(
+        `Unable to create Razorpay order: ${message}`,
+      );
     }
     const tenantId =
       (currentUser as IAuthUser & {tenantId?: string}).tenantId ??
@@ -104,6 +118,7 @@ export class PaymentSessionController {
       paymentmethod: 'razorpay',
       metaData: {
         applicationOrderId: request.orderId,
+        applicationOrderUserId: currentUser.id,
         razorpayOrderId: paymentOrder.id,
         amountInRupees: amount,
         checkoutDetails: request.checkoutDetails ?? {},
@@ -161,36 +176,115 @@ export class PaymentSessionController {
     if (metadata.razorpayOrderId !== request.razorpayOrderId) {
       throw new HttpErrors.BadRequest('Payment order does not match.');
     }
+    const userId = String(currentUser.id ?? '');
+    if (!userId || metadata.applicationOrderUserId !== userId) {
+      throw new HttpErrors.Forbidden(
+        'This payment order does not belong to the authenticated user.',
+      );
+    }
     const tenantId =
       (currentUser as IAuthUser & {tenantId?: string}).tenantId ??
       '4750fdd9-12a8-47a6-a508-5dd2d95da9cc';
 
-    const transaction = await this.transactionsRepository.create({
-      id: uuidv4(),
-      amountPaid: order.totalAmount,
-      currency: order.currency,
-      status: 'paid',
-      paidDate: new Date(),
-      paymentGatewayId: order.paymentGatewayId,
-      orderId: order.id,
-      res: {
-        razorpayOrderId: request.razorpayOrderId,
-        razorpayPaymentId: request.razorpayPaymentId,
-        razorpaySignature: request.razorpaySignature,
-        checkoutDetails: metadata.checkoutDetails ?? {},
-      },
-      tenantId,
+    let transaction = await this.transactionsRepository.findOne({
+      where: {orderId: order.id},
     });
+    let updatedMetadata = {...metadata};
 
-    await this.ordersRepository.updateById(order.id as string, {
-      status: 'paid',
-      metaData: {
+    if (order.status !== 'paid') {
+      transaction = await this.transactionsRepository.create({
+        id: uuidv4(),
+        amountPaid: order.totalAmount,
+        currency: order.currency,
+        status: 'paid',
+        paidDate: new Date(),
+        paymentGatewayId: order.paymentGatewayId,
+        orderId: order.id,
+        res: {
+          razorpayOrderId: request.razorpayOrderId,
+          razorpayPaymentId: request.razorpayPaymentId,
+          razorpaySignature: request.razorpaySignature,
+          checkoutDetails: metadata.checkoutDetails ?? {},
+        },
+        tenantId,
+      });
+
+      updatedMetadata = {
         ...metadata,
         razorpayPaymentId: request.razorpayPaymentId,
         razorpaySignature: request.razorpaySignature,
-      },
-    });
+      };
+      await this.ordersRepository.updateById(order.id as string, {
+        status: 'paid',
+        metaData: updatedMetadata,
+      });
+    } else if (!transaction) {
+      throw new HttpErrors.InternalServerError(
+        'The paid order has no recorded payment transaction.',
+      );
+    }
 
-    return {order, transaction};
+    let paymentNotificationSent =
+      metadata.paymentNotificationSent === true ||
+      metadata.notificationSent === true;
+    if (!paymentNotificationSent) {
+      try {
+        await publishPaidOrderNotification({
+          orderId: String(metadata.applicationOrderId),
+          userId,
+          username: currentUser.username ?? userId,
+          kind: 'payment',
+        });
+        paymentNotificationSent = true;
+        updatedMetadata = {
+          ...updatedMetadata,
+          notificationSent: true,
+          paymentNotificationSent: true,
+        };
+        await this.ordersRepository.updateById(order.id as string, {
+          metaData: updatedMetadata,
+        });
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : 'Unknown notification error';
+        console.error(
+          `Payment succeeded for order ${String(metadata.applicationOrderId)}, but its notification could not be sent: ${message}`,
+        );
+      }
+    }
+
+    let orderConfirmationNotificationSent =
+      metadata.orderConfirmationNotificationSent === true;
+    if (!orderConfirmationNotificationSent) {
+      try {
+        await publishPaidOrderNotification({
+          orderId: String(metadata.applicationOrderId),
+          userId,
+          username: currentUser.username ?? userId,
+          kind: 'order-confirmed',
+        });
+        orderConfirmationNotificationSent = true;
+        updatedMetadata = {
+          ...updatedMetadata,
+          orderConfirmationNotificationSent: true,
+        };
+        await this.ordersRepository.updateById(order.id as string, {
+          metaData: updatedMetadata,
+        });
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : 'Unknown notification error';
+        console.error(
+          `Order ${String(metadata.applicationOrderId)} was paid, but its confirmation notification could not be sent: ${message}`,
+        );
+      }
+    }
+
+    return {
+      order: {...order, status: 'paid', metaData: updatedMetadata},
+      transaction,
+      paymentNotificationSent,
+      orderConfirmationNotificationSent,
+    };
   }
 }

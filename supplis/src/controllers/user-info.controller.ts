@@ -1,5 +1,6 @@
 import {repository} from '@loopback/repository';
 import {get, param, HttpErrors} from '@loopback/rest';
+import {OPERATION_SECURITY_SPEC} from '@sourceloop/core';
 import {
   RoleRepository,
   UserRepository,
@@ -16,14 +17,24 @@ export class UserInfoController {
     public roleRepository: RoleRepository,
   ) {}
 
-  @get('/auth/userinfo')
+  @get('/auth/userinfo', {
+    security: OPERATION_SECURITY_SPEC,
+    responses: {
+      '200': {description: 'Current user profile'},
+    },
+  })
   async getUserInfo(
     @param.header.string('Authorization') authHeader?: string,
   ): Promise<any> {
     return this.getUserProfile(authHeader);
   }
 
-  @get('/auth/me')
+  @get('/auth/me', {
+    security: OPERATION_SECURITY_SPEC,
+    responses: {
+      '200': {description: 'Current user profile'},
+    },
+  })
   async getMe(
     @param.header.string('Authorization') authHeader?: string,
   ): Promise<any> {

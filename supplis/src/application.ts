@@ -17,6 +17,7 @@ import {AuthorizationComponent, AuthorizationBindings} from 'loopback4-authoriza
 import {AuthSeedObserver} from './observers/auth-seed.observer';
 import {Strategies} from 'loopback4-authentication';
 import {LocalPasswordStrategyFactoryProvider} from './providers/local-password-strategy-factory.provider';
+import {OPERATION_SECURITY_SPEC} from '@sourceloop/core';
 
 export {ApplicationConfig};
 
@@ -25,6 +26,21 @@ export class SuplisBackendApplication extends BootMixin(
 ) {
   constructor(options: ApplicationConfig = {}) {
     super(options);
+
+    this.api({
+      openapi: '3.0.0',
+      info: {title: 'Suplis Backend API', version: '1.0.0'},
+      paths: {},
+      components: {
+        securitySchemes: {
+          HTTPBearer: {
+            type: 'http',
+            scheme: 'bearer',
+            bearerFormat: 'JWT',
+          },
+        },
+      },
+    });
 
     // Set up the custom sequence
     this.sequence(MySequence);

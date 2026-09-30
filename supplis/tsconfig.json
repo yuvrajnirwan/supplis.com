@@ -13,6 +13,7 @@
     "test",
     "src/order-service",
     "src/payment-service",
-    "src/chat-service"
+    "src/chat-service",
+    "src/notification-service"
   ]
 }
